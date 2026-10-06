@@ -5,98 +5,7 @@ import { ProjectItem } from '../types';
 import { ExternalLink, Github, Sparkles, X, CheckCircle2, ChevronDown } from 'lucide-react';
 import { ProjectCardContent } from './ProjectCardContent';
 
-interface TiltProjectCardProps {
-  project: ProjectItem;
-  index: number;
-  cardRef: (el: HTMLDivElement | null) => void;
-  onOpenModal: (proj: ProjectItem) => void;
-}
 
-const TiltProjectCard: React.FC<TiltProjectCardProps> = ({
-  project,
-  index,
-  cardRef,
-  onOpenModal,
-}) => {
-  const [rotate, setRotate] = useState({ x: 0, y: 0, isHovered: false });
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    setMousePos({ x, y });
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotX = ((y - centerY) / centerY) * -4.5;
-    const rotY = ((x - centerX) / centerX) * 4.5;
-    setRotate({ x: rotX, y: rotY, isHovered: true });
-  };
-
-  const handleMouseLeave = () => {
-    setRotate({ x: 0, y: 0, isHovered: false });
-  };
-
-  return (
-    <motion.div
-      ref={(el) => {
-        containerRef.current = el;
-        cardRef(el);
-      }}
-      initial={{ opacity: 0, y: 65, scale: 0.95 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{
-        duration: 0.75,
-        delay: index * 0.08,
-        ease: [0.16, 1, 0.3, 1],
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      animate={{
-        rotateX: rotate.isHovered ? rotate.x : 0,
-        rotateY: rotate.isHovered ? rotate.y : 0,
-        y: rotate.isHovered ? -8 : 0,
-      }}
-      style={{
-        perspective: 1200,
-        transformStyle: 'preserve-3d',
-      }}
-      className="w-full relative transition-all duration-300"
-    >
-      {/* Dynamic Ambient Background Glow on Hover */}
-      <div
-        className="absolute -inset-1 rounded-[32px] sm:rounded-[42px] md:rounded-[48px] bg-gradient-to-r from-[#00E676]/30 via-[#10F280]/20 to-[#00E676]/30 blur-xl opacity-0 transition-opacity duration-500 pointer-events-none group-hover:opacity-100"
-        style={{
-          opacity: rotate.isHovered ? 0.6 : 0,
-        }}
-      />
-
-      {/* Interactive Card Container with Mouse Spotlight */}
-      <div
-        className="relative w-full rounded-[28px] sm:rounded-[38px] md:rounded-[44px] overflow-hidden transition-all duration-300 shadow-[0_15px_40px_rgba(0,0,0,0.8)] hover:shadow-[0_25px_60px_rgba(0,230,118,0.2)]"
-      >
-        {/* Dynamic Cursor Spotlight Overlay */}
-        {rotate.isHovered && (
-          <div
-            className="absolute inset-0 pointer-events-none z-10 transition-opacity duration-300"
-            style={{
-              background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(0, 230, 118, 0.08), transparent 45%)`,
-            }}
-          />
-        )}
-
-        <ProjectCardContent
-          project={project}
-          onOpenModal={onOpenModal}
-        />
-      </div>
-    </motion.div>
-  );
-};
 
 export const ProjectsSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
@@ -176,23 +85,47 @@ export const ProjectsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* ANIMATED PROJECTS LIST */}
-      <div className="mx-auto max-w-5xl w-full flex flex-col gap-10 sm:gap-14 md:gap-16">
-        {PROJECTS_DATA.map((project, index) => (
-          <TiltProjectCard
-            key={project.id}
-            project={project}
-            index={index}
-            cardRef={(el) => {
-              cardRefs.current[index] = el;
-            }}
-            onOpenModal={(proj) => setSelectedProject(proj)}
-          />
-        ))}
+      {/* STACKING DECK OF CARDS CONTAINER */}
+      <div className="mx-auto max-w-5xl w-full relative">
+        {PROJECTS_DATA.map((project, index) => {
+          const isLast = index === PROJECTS_DATA.length - 1;
+
+          // Responsive sticky top offset:
+          // Card 0: pins at top (clamp 65px - 80px)
+          // Card 1: pins at top + 130px (covering bottom half of Card 0)
+          // Card 2: pins at top + 260px (covering bottom half of Card 1)
+          // Card 3: pins at top + 390px (covering bottom half of Card 2)
+          const stickyTopStyle = `calc(clamp(65px, 8vh, 80px) + ${index} * clamp(115px, 15vh, 155px))`;
+
+          return (
+            <div
+              key={project.id}
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
+              style={{
+                position: 'sticky',
+                top: stickyTopStyle,
+                zIndex: 10 + index,
+                marginBottom: isLast ? '60px' : 'clamp(280px, 42vh, 440px)',
+              }}
+              className="w-full origin-top transition-all duration-300 group"
+            >
+              {/* Card wrapper with hover elevation & green illumination */}
+              <div className="relative w-full rounded-[28px] sm:rounded-[38px] md:rounded-[44px] transition-transform duration-200 hover:-translate-y-2.5 hover:z-50 shadow-[0_-22px_48px_rgba(0,0,0,0.95)]">
+                <ProjectCardContent
+                  project={project}
+                  onOpenModal={(proj) => setSelectedProject(proj)}
+                  isStacked={true}
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {/* SECTION FOOTER INDICATOR */}
-      <div className="mx-auto max-w-5xl w-full text-center mt-12 sm:mt-16 flex flex-col items-center justify-center text-white/40 text-xs font-mono">
+      <div className="mx-auto max-w-5xl w-full text-center mt-8 sm:mt-12 flex flex-col items-center justify-center text-white/40 text-xs font-mono">
         <div className="flex items-center gap-2">
           <span>Scroll down for Training & Education</span>
         </div>

@@ -12,6 +12,7 @@ interface ProjectCardContentProps {
 export const ProjectCardContent: React.FC<ProjectCardContentProps> = ({
   project,
   onOpenModal,
+  isStacked = false,
 }) => {
   return (
     <div className="w-full rounded-[28px] sm:rounded-[38px] md:rounded-[44px] border-2 border-[#D7E2EA]/30 bg-[#0C0C0C]/95 p-4 sm:p-5 md:p-6 shadow-[0_15px_45px_rgba(0,0,0,0.9)] transition-all duration-300 hover:border-[#00E676]/60 hover:shadow-[0_20px_60px_rgba(0,230,118,0.18)] group/card">
