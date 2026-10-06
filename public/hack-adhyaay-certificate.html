@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate of Appreciation - HACK-ADHYAAY | Girish Kumar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #0f1115;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 24px 16px 48px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+    }
+    .top-bar {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      background: rgba(26, 29, 36, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+    }
+    .cert-title h1 { font-size: 16px; font-weight: 700; color: #ffffff; }
+    .cert-title p { font-size: 12px; color: #94a3b8; }
+    .actions { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-purple { background: #7928ca; color: #ffffff; }
+    .btn-purple:hover { background: #6b21a8; }
+    .btn-subtle { background: rgba(255,255,255,0.08); color: #e2e8f0; }
+    .btn-subtle:hover { background: rgba(255,255,255,0.15); }
+    .cert-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .cert-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .top-bar { display: none; }
+      .cert-wrapper { box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="cert-title">
+      <h1>HACK-ADHYAAY — Certificate of Appreciation</h1>
+      <p>Organized by CodIntern & Vibranta • Awarded to Girish Kumar (Nov 28-29, 2025)</p>
+    </div>
+    <div class="actions">
+      <button onclick="window.print()" class="btn btn-purple">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Print / Save PDF
+      </button>
+      <a href="/" class="btn btn-subtle">Portfolio</a>
+    </div>
+  </div>
+
+  <div class="cert-wrapper">
+    <img src="/hack-adhyaay-certificate.svg" alt="Certificate of Appreciation - HACK-ADHYAAY Girish Kumar" class="cert-svg" />
+  </div>
+</body>
+</html>

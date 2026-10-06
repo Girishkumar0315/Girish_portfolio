@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060C1B"/>
+      <stop offset="50%" stop-color="#09142C"/>
+      <stop offset="100%" stop-color="#040814"/>
+    </linearGradient>
+
+    <radialGradient id="heatDelhi" cx="45%" cy="32%" r="20%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#F97316" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="heatGanga" cx="62%" cy="40%" r="25%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.65"/>
+      <stop offset="50%" stop-color="#EAB308" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="heatSouth" cx="48%" cy="75%" r="22%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="techGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00D2FF" stroke-width="0.75" stroke-opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#mapBg)"/>
+  <rect width="1280" height="720" fill="url(#techGrid)"/>
+
+  <!-- Top Bar -->
+  <rect x="30" y="24" width="1220" height="56" rx="16" fill="#0E1E3D" fill-opacity="0.7" stroke="#00D2FF" stroke-width="1.5" stroke-opacity="0.3"/>
+  <circle cx="60" cy="52" r="8" fill="#10B981"/>
+  <text x="80" y="58" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="800" font-size="16" letter-spacing="1">INDIA AQI GEOSPATIAL SATELLITE DISPERSION</text>
+  <text x="1050" y="57" fill="#00D2FF" font-family="system-ui, sans-serif" font-weight="600" font-size="13">LIVE SENSORS: 1,420 ACTIVE</text>
+
+  <!-- Map Silhouette & Dispersion Area -->
+  <g transform="translate(140, 100)">
+    <!-- Heatmap Blobs -->
+    <rect x="0" y="0" width="600" height="540" fill="url(#heatDelhi)"/>
+    <rect x="0" y="0" width="600" height="540" fill="url(#heatGanga)"/>
+    <rect x="0" y="0" width="600" height="540" fill="url(#heatSouth)"/>
+
+    <!-- Stylized India Geospatial Map Contour -->
+    <path d="M 280,40 L 320,60 L 350,110 L 400,140 L 430,190 L 410,240 L 470,250 L 510,230 L 540,260 L 480,310 L 430,320 L 410,380 L 350,490 L 300,520 L 260,450 L 230,360 L 190,320 L 180,260 L 210,220 L 210,160 L 250,110 Z"
+          fill="#0B2044" fill-opacity="0.5" stroke="#00E5FF" stroke-width="2.5" stroke-linejoin="round" filter="drop-shadow(0 0 10px rgba(0,229,255,0.4))"/>
+
+    <!-- State Border Grid Subdivisions -->
+    <path d="M 250,110 L 330,190 M 210,220 L 350,230 M 230,360 L 410,380 M 320,60 L 280,180 M 330,190 L 430,190 M 410,240 L 350,340"
+          stroke="#00D2FF" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4,4"/>
+
+    <!-- Sensor Nodes & Cluster Rings -->
+    <!-- Delhi Node (Severe) -->
+    <circle cx="280" cy="180" r="26" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <circle cx="280" cy="180" r="7" fill="#EF4444"/>
+    <rect x="295" y="165" width="130" height="34" rx="8" fill="#1A0D15" stroke="#EF4444" stroke-width="1"/>
+    <text x="305" y="186" fill="#FCA5A5" font-family="system-ui, sans-serif" font-weight="700" font-size="12">DELHI-NCR: 342 AQI</text>
+
+    <!-- Mumbai Node (Moderate) -->
+    <circle cx="230" cy="330" r="20" fill="none" stroke="#F59E0B" stroke-width="1.5"/>
+    <circle cx="230" cy="330" r="6" fill="#F59E0B"/>
+    <rect x="110" y="315" width="110" height="30" rx="6" fill="#1A150D" stroke="#F59E0B" stroke-width="1"/>
+    <text x="118" y="335" fill="#FCD34D" font-family="system-ui, sans-serif" font-weight="700" font-size="11">MUMBAI: 158 AQI</text>
+
+    <!-- Bengaluru Node (Good) -->
+    <circle cx="290" cy="450" r="18" fill="none" stroke="#10B981" stroke-width="1.5"/>
+    <circle cx="290" cy="450" r="6" fill="#10B981"/>
+    <rect x="305" y="438" width="130" height="30" rx="6" fill="#0A1A14" stroke="#10B981" stroke-width="1"/>
+    <text x="314" y="457" fill="#6EE7B7" font-family="system-ui, sans-serif" font-weight="700" font-size="11">BENGALURU: 64 AQI</text>
+
+    <!-- Kolkata Node (Poor) -->
+    <circle cx="430" cy="280" r="18" fill="none" stroke="#F97316" stroke-width="1.5"/>
+    <circle cx="430" cy="280" r="6" fill="#F97316"/>
+    <rect x="445" y="268" width="115" height="30" rx="6" fill="#1C110A" stroke="#F97316" stroke-width="1"/>
+    <text x="453" y="287" fill="#FDBA74" font-family="system-ui, sans-serif" font-weight="700" font-size="11">KOLKATA: 218 AQI</text>
+  </g>
+
+  <!-- Right Side Analytics Panel -->
+  <g transform="translate(800, 110)">
+    <!-- Card 1: National Severity Gauge -->
+    <rect x="0" y="0" width="450" height="170" rx="20" fill="#0C1731" stroke="#00D2FF" stroke-width="1.5" stroke-opacity="0.3"/>
+    <text x="24" y="36" fill="#8FAECF" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1">NATIONAL AVERAGE AQI</text>
+    <text x="24" y="90" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="46" font-weight="900">184 <tspan font-size="20" fill="#F59E0B" font-weight="700">MODERATE</tspan></text>
+    <!-- Scale Bar -->
+    <rect x="24" y="115" width="402" height="12" rx="6" fill="#132345"/>
+    <rect x="24" y="115" width="80" height="12" rx="6" fill="#10B981"/>
+    <rect x="104" y="115" width="80" height="12" fill="#EAB308"/>
+    <rect x="184" y="115" width="80" height="12" fill="#F97316"/>
+    <rect x="264" y="115" width="80" height="12" fill="#EF4444"/>
+    <rect x="344" y="115" width="82" height="12" rx="6" fill="#7C3AED"/>
+    <circle cx="170" cy="121" r="10" fill="#FFFFFF" stroke="#0C1731" stroke-width="3"/>
+    <text x="24" y="148" fill="#8FAECF" font-family="system-ui, sans-serif" font-size="10">0 Good</text>
+    <text x="390" y="148" fill="#8FAECF" font-family="system-ui, sans-serif" font-size="10">500+ Severe</text>
+
+    <!-- Card 2: Top Pollutant Breakdown -->
+    <rect x="0" y="195" width="450" height="180" rx="20" fill="#0C1731" stroke="#00D2FF" stroke-width="1.5" stroke-opacity="0.3"/>
+    <text x="24" y="230" fill="#8FAECF" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PRIMARY CONTRIBUTING POLLUTANTS</text>
+
+    <!-- PM2.5 Bar -->
+    <text x="24" y="265" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">PM2.5</text>
+    <text x="360" y="265" fill="#F97316" font-family="system-ui, sans-serif" font-size="13" font-weight="700">74.2 µg/m³</text>
+    <rect x="24" y="275" width="402" height="8" rx="4" fill="#132345"/>
+    <rect x="24" y="275" width="290" height="8" rx="4" fill="#F97316"/>
+
+    <!-- PM10 Bar -->
+    <text x="24" y="315" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">PM10</text>
+    <text x="360" y="315" fill="#EAB308" font-family="system-ui, sans-serif" font-size="13" font-weight="700">142 µg/m³</text>
+    <rect x="24" y="325" width="402" height="8" rx="4" fill="#132345"/>
+    <rect x="24" y="325" width="230" height="8" rx="4" fill="#EAB308"/>
+
+    <!-- NO2 Bar -->
+    <text x="24" y="360" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">NO2 / SO2</text>
+    <text x="360" y="360" fill="#10B981" font-family="system-ui, sans-serif" font-size="13" font-weight="700">38.4 ppb</text>
+    <rect x="24" y="370" width="402" height="8" rx="4" fill="#132345"/>
+    <rect x="24" y="370" width="130" height="8" rx="4" fill="#10B981"/>
+
+    <!-- Card 3: District Clustering Status -->
+    <rect x="0" y="395" width="450" height="150" rx="20" fill="#0C1731" stroke="#00D2FF" stroke-width="1.5" stroke-opacity="0.3"/>
+    <text x="24" y="430" fill="#8FAECF" font-family="system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1">DISTRICT SEVERITY CLUSTERING (DAX MODEL)</text>
+    <text x="24" y="468" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Total Monitored Districts: <tspan fill="#00D2FF" font-weight="800">728 Districts</tspan></text>
+    <text x="24" y="496" fill="#8FAECF" font-family="system-ui, sans-serif" font-size="12">Interactive DAX measures calculate multi-pollutant severity scores</text>
+    <text x="24" y="516" fill="#8FAECF" font-family="system-ui, sans-serif" font-size="12">incorporating weather humidity and wind velocity vectors.</text>
+  </g>
+</svg>

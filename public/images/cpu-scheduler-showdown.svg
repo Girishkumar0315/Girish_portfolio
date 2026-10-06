@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="cpuBg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#081E36"/>
+      <stop offset="45%" stop-color="#051224"/>
+      <stop offset="85%" stop-color="#020812"/>
+      <stop offset="100%" stop-color="#010408"/>
+    </radialGradient>
+
+    <!-- Cyan Glow Filters -->
+    <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur1"/>
+      <feGaussianBlur stdDeviation="24" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Green Glow Filter -->
+    <filter id="glowGreen" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur1"/>
+      <feGaussianBlur stdDeviation="24" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Yellow Arrow Glow Filter -->
+    <filter id="glowYellow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Red Savings Text Glow -->
+    <filter id="glowRed" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Cyan Column Gradients -->
+    <linearGradient id="cyanColLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0088CC" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="cyanColRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00A2E8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#005B99" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="cyanColTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8FCFF"/>
+      <stop offset="50%" stop-color="#38E1FF"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+
+    <!-- Green Column Gradients -->
+    <linearGradient id="greenColLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10F280" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#05964F" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="greenColRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0EB860" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#046835" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="greenColTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8FFF2"/>
+      <stop offset="50%" stop-color="#4EFA98"/>
+      <stop offset="100%" stop-color="#05C46B"/>
+    </linearGradient>
+
+    <!-- Pedestal Glass Gradients -->
+    <linearGradient id="pedestalCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#003D66" stop-opacity="0.65"/>
+    </linearGradient>
+    <linearGradient id="pedestalGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20F88E" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#064828" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1600" height="900" fill="url(#cpuBg)"/>
+
+  <!-- High-Tech Circuit Board Traces & Grid Lines -->
+  <g stroke="#00C4DF" stroke-opacity="0.18" stroke-width="1.5" fill="none">
+    <path d="M 80 180 L 260 180 L 360 280 L 360 480"/>
+    <path d="M 140 720 L 280 720 L 400 840 L 700 840"/>
+    <path d="M 1520 180 L 1340 180 L 1240 280 L 1240 450"/>
+    <path d="M 1460 700 L 1320 700 L 1200 820 L 980 820"/>
+    <path d="M 420 580 L 260 740 L 120 740"/>
+    <path d="M 1180 560 L 1340 720 L 1480 720"/>
+    <path d="M 500 120 L 620 120 L 700 60"/>
+    <path d="M 1100 120 L 980 120 L 900 60"/>
+  </g>
+
+  <!-- Circuit Trace Glowing Nodes & Ambient Particles -->
+  <g fill="#00E5FF">
+    <circle cx="260" cy="180" r="3.5" fill-opacity="0.8"/>
+    <circle cx="360" cy="280" r="4.5" fill-opacity="0.9" filter="url(#glowCyan)"/>
+    <circle cx="280" cy="720" r="3.5" fill-opacity="0.8"/>
+    <circle cx="400" cy="840" r="4" fill-opacity="0.8"/>
+    <circle cx="1340" cy="180" r="3.5" fill-opacity="0.8"/>
+    <circle cx="1240" cy="280" r="4.5" fill-opacity="0.9" filter="url(#glowCyan)"/>
+    <circle cx="1320" cy="700" r="3.5" fill-opacity="0.8"/>
+    <circle cx="1200" cy="820" r="4" fill-opacity="0.8"/>
+    <circle cx="160" cy="380" r="2" fill-opacity="0.5"/>
+    <circle cx="480" cy="300" r="2.5" fill-opacity="0.5"/>
+    <circle cx="1440" cy="460" r="2" fill-opacity="0.5"/>
+    <circle cx="1120" cy="650" r="2.5" fill-opacity="0.5"/>
+    <circle cx="240" cy="580" r="2" fill-opacity="0.4"/>
+    <circle cx="1300" cy="340" r="2.5" fill-opacity="0.6"/>
+  </g>
+
+  <!-- Outer HUD Frame Accents -->
+  <g stroke="#00C4DF" stroke-opacity="0.35" stroke-width="1.5" fill="none">
+    <path d="M 60 70 L 60 40 L 90 40"/>
+    <path d="M 1510 40 L 1540 40 L 1540 70"/>
+    <path d="M 60 830 L 60 860 L 90 860"/>
+    <path d="M 1510 860 L 1540 860 L 1540 830"/>
+    <line x1="90" y1="40" x2="720" y2="40" stroke-dasharray="5,8"/>
+    <line x1="880" y1="40" x2="1510" y2="40" stroke-dasharray="5,8"/>
+    <circle cx="1460" cy="55" r="4" fill="#00E5FF" fill-opacity="0.85"/>
+  </g>
+
+  <!-- TOP CENTER MICROCHIP ICON -->
+  <g transform="translate(800, 65)">
+    <!-- Circuit pins -->
+    <g stroke="#00E5FF" stroke-width="2" stroke-opacity="0.75">
+      <line x1="-16" y1="-26" x2="-16" y2="-18"/>
+      <line x1="0" y1="-26" x2="0" y2="-18"/>
+      <line x1="16" y1="-26" x2="16" y2="-18"/>
+      <line x1="-16" y1="18" x2="-16" y2="26"/>
+      <line x1="0" y1="18" x2="0" y2="26"/>
+      <line x1="16" y1="18" x2="16" y2="26"/>
+      <line x1="-26" y1="-10" x2="-18" y2="-10"/>
+      <line x1="-26" y1="10" x2="-18" y2="10"/>
+      <line x1="18" y1="-10" x2="26" y2="-10"/>
+      <line x1="18" y1="10" x2="26" y2="10"/>
+    </g>
+    <!-- Chip squircle body -->
+    <rect x="-20" y="-20" width="40" height="40" rx="8" fill="#06253D" stroke="#00D2FF" stroke-width="2.5" filter="url(#glowCyan)"/>
+    <!-- Lightning bolt inside -->
+    <path d="M 2,-12 L -8,0 L -1,0 L -3,12 L 8,-1 L 1,-1 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- HEADER TITLE & BRACKETS -->
+  <g transform="translate(800, 130)" text-anchor="middle">
+    <!-- Cyber bracket accents -->
+    <path d="M -460 -15 L -480 -15 L -480 30" stroke="#00E5FF" stroke-width="3" fill="none"/>
+    <path d="M 460 30 L 480 30 L 480 -15" stroke="#00E5FF" stroke-width="3" fill="none"/>
+    <text x="0" y="16" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="38" letter-spacing="1.5">CPU SCHEDULER SHOWDOWN: ENERGY EFFICIENCY</text>
+    <text x="0" y="54" fill="#BCE0F5" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="22" letter-spacing="0.5">DVFS Algorithm Halves Energy Use</text>
+  </g>
+
+  <!-- HERO STAT: 50.00% SAVINGS! -->
+  <g transform="translate(800, 245)" text-anchor="middle">
+    <text x="0" y="0" fill="#FF3A4B" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-style="italic" font-size="46" letter-spacing="1.5" filter="url(#glowRed)">50.00% SAVINGS!</text>
+  </g>
+
+  <!-- 3D ISOMETRIC VISUALIZATION STAGE -->
+  <g id="isometric-stage">
+    <!-- 1. LEFT PEDESTAL PLATFORM (Cyan Glass) -->
+    <g transform="translate(630, 710)">
+      <!-- Platform bottom drop edge -->
+      <polygon points="0,34 -155,-34 0,-105 155,-34" fill="#003550" fill-opacity="0.45"/>
+      <!-- Platform top face -->
+      <polygon points="0,22 -150,-48 0,-118 150,-48" fill="url(#pedestalCyan)" stroke="#00F0FF" stroke-width="2" filter="url(#glowCyan)"/>
+      <polygon points="-150,-48 0,22 0,36 -150,-34" fill="#005A87" stroke="#00F0FF" stroke-width="1.5"/>
+      <polygon points="150,-48 0,22 0,36 150,-34" fill="#003753" stroke="#00F0FF" stroke-width="1.5"/>
+    </g>
+
+    <!-- 2. LEFT COLUMN: TALL CYAN 3D CUBE PRISM (FCFS Baseline) -->
+    <!-- Base center at (630, 660), Height = 320px -->
+    <g id="fcfs-column">
+      <!-- Ambient Glow Behind Tall Column -->
+      <ellipse cx="630" cy="480" rx="120" ry="180" fill="#00D2FF" fill-opacity="0.14" filter="url(#glowCyan)"/>
+
+      <!-- Column Left Face -->
+      <polygon points="520,625 630,685 630,365 520,305" fill="url(#cyanColLeft)" stroke="#38E1FF" stroke-width="1.5"/>
+      
+      <!-- Column Right Face -->
+      <polygon points="740,625 630,685 630,365 740,305" fill="url(#cyanColRight)" stroke="#00C4DF" stroke-width="1.5"/>
+      
+      <!-- Column Top Diamond Face -->
+      <polygon points="630,365 520,305 630,245 740,305" fill="url(#cyanColTop)" stroke="#FFFFFF" stroke-width="2" filter="url(#glowCyan)"/>
+
+      <!-- Internal wireframe center line -->
+      <line x1="630" y1="365" x2="630" y2="685" stroke="#E8FCFF" stroke-width="2" stroke-opacity="0.85"/>
+
+      <!-- Floating Joules Metric Above Left Column -->
+      <g transform="translate(575, 220) rotate(-14)">
+        <text x="0" y="0" fill="#38E1FF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-style="italic" font-size="36" letter-spacing="0.5" filter="url(#glowCyan)">10,205.18</text>
+        <text x="40" y="26" fill="#38E1FF" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="17" letter-spacing="1.5">JOULES)</text>
+      </g>
+
+      <!-- Front Label: FCFS (Baseline) -->
+      <g transform="translate(680, 700) rotate(-16)">
+        <text x="0" y="0" fill="#E2F4FC" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" letter-spacing="0.5">FCFS (Baseline)</text>
+      </g>
+    </g>
+
+    <!-- 3. RIGHT PEDESTAL PLATFORM (Green Glass) -->
+    <g transform="translate(970, 620)">
+      <!-- Platform bottom drop edge -->
+      <polygon points="0,30 -150,-34 0,-100 150,-34" fill="#04321A" fill-opacity="0.45"/>
+      <!-- Platform top face -->
+      <polygon points="0,20 -145,-45 0,-112 145,-45" fill="url(#pedestalGreen)" stroke="#20F88E" stroke-width="2" filter="url(#glowGreen)"/>
+      <polygon points="-145,-45 0,20 0,32 -145,-32" fill="#086B39" stroke="#20F88E" stroke-width="1.5"/>
+      <polygon points="145,-45 0,20 0,32 145,-32" fill="#044423" stroke="#20F88E" stroke-width="1.5"/>
+    </g>
+
+    <!-- 4. RIGHT COLUMN: SHORT GREEN 3D CUBE PRISM (Energy-Aware DVFS) -->
+    <!-- Half height (160px)! -->
+    <g id="dvfs-column">
+      <!-- Ambient Glow Behind Short Column -->
+      <ellipse cx="970" cy="460" rx="100" ry="120" fill="#10E878" fill-opacity="0.18" filter="url(#glowGreen)"/>
+
+      <!-- Column Left Face -->
+      <polygon points="860,535 970,595 970,435 860,375" fill="url(#greenColLeft)" stroke="#38F48C" stroke-width="1.5"/>
+      
+      <!-- Column Right Face -->
+      <polygon points="1080,535 970,595 970,435 1080,375" fill="url(#greenColRight)" stroke="#0BA856" stroke-width="1.5"/>
+      
+      <!-- Column Top Diamond Face -->
+      <polygon points="970,435 860,375 970,315 1080,375" fill="url(#greenColTop)" stroke="#FFFFFF" stroke-width="2" filter="url(#glowGreen)"/>
+
+      <!-- Internal wireframe center line -->
+      <line x1="970" y1="435" x2="970" y2="595" stroke="#E8FFF2" stroke-width="2" stroke-opacity="0.85"/>
+
+      <!-- Floating Joules Metric Above Right Column -->
+      <g transform="translate(915, 290) rotate(-14)">
+        <text x="0" y="0" fill="#4EFA98" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-style="italic" font-size="36" letter-spacing="0.5" filter="url(#glowGreen)">5,102.59</text>
+        <text x="40" y="26" fill="#4EFA98" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="17" letter-spacing="1.5">JOULES)</text>
+      </g>
+
+      <!-- Front Label: Energy-Aware (DVFS) -->
+      <g transform="translate(960, 675) rotate(-16)">
+        <text x="0" y="0" fill="#E2FCEE" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" letter-spacing="0.5">Energy-Aware (DVFS)</text>
+      </g>
+    </g>
+
+    <!-- 5. DYNAMIC SWOOPING YELLOW ARROW -->
+    <!-- Swoops from above the tall cyan column down to the top of the short green column -->
+    <g id="savings-arrow" filter="url(#glowYellow)">
+      <path d="M 700 240 Q 820 200, 890 290 Q 920 330, 905 380" 
+            fill="none" stroke="#FFDF00" stroke-width="24" stroke-linecap="round"/>
+      <polygon points="880,355 940,385 890,410 900,375" fill="#FFDF00"/>
+    </g>
+  </g>
+
+  <!-- BOTTOM STATUS & STATS FOOTER -->
+  <!-- Left: Total Tasks Simulated Ring Gauge -->
+  <g transform="translate(630, 825)">
+    <circle cx="36" cy="36" r="30" fill="none" stroke="#003550" stroke-width="7"/>
+    <circle cx="36" cy="36" r="30" fill="none" stroke="#00E5FF" stroke-width="7" 
+            stroke-dasharray="140, 50" stroke-linecap="round" filter="url(#glowCyan)"/>
+    <text x="85" y="30" fill="#8BB2C9" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="500">Total Tasks Simulated:</text>
+    <text x="85" y="54" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="900">100</text>
+  </g>
+
+  <!-- Right: Energy Aware Badges (F ⚡ E) -->
+  <g transform="translate(1180, 810)">
+    <text x="0" y="0" fill="#8BB2C9" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600">Energy Aware)</text>
+    <g transform="translate(5, 14)">
+      <!-- F square (Cyan) -->
+      <rect x="0" y="0" width="22" height="22" rx="3" fill="#00A2E8"/>
+      <text x="11" y="16" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="900" font-size="14" text-anchor="middle">F</text>
+      <!-- Lightning square (Yellow) -->
+      <rect x="28" y="0" width="22" height="22" rx="3" fill="#FFC700"/>
+      <path d="M 40,4 L 35,12 L 39,12 L 37,19 L 44,11 L 40,11 Z" fill="#000000"/>
+      <!-- E square (Green) -->
+      <rect x="56" y="0" width="22" height="22" rx="3" fill="#10B981"/>
+      <text x="67" y="16" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="900" font-size="14" text-anchor="middle">E</text>
+    </g>
+  </g>
+</svg>

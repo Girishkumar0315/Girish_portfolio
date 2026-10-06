@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Dark Cosmic Nebula Radial Gradient -->
+    <radialGradient id="nebulaGlow" cx="50%" cy="36%" r="60%">
+      <stop offset="0%" stop-color="#361748" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#210F30" stop-opacity="0.25"/>
+      <stop offset="65%" stop-color="#0E0817" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Stat Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#12141C" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0A0B10" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Main Title Ambient Glow Filter -->
+    <filter id="titleGlow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur1"/>
+      <feGaussianBlur stdDeviation="32" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .game-font {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .tech-title {
+      font-family: "Impact", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 900;
+      letter-spacing: 16px;
+    }
+  </style>
+
+  <!-- Deep Cosmic Background -->
+  <rect width="1600" height="900" fill="#06070B"/>
+
+  <!-- Radial Nebula Atmosphere -->
+  <rect width="1600" height="900" fill="url(#nebulaGlow)"/>
+
+  <!-- Starfield & Constellation Network (Precisely placed matching the screenshot) -->
+  <g stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1">
+    <!-- Top-Left Constellation -->
+    <line x1="80" y1="180" x2="160" y2="150"/>
+    <line x1="160" y1="150" x2="240" y2="230"/>
+    <line x1="240" y1="230" x2="180" y2="310"/>
+    <line x1="80" y1="180" x2="180" y2="310"/>
+    <line x1="240" y1="230" x2="350" y2="190"/>
+
+    <!-- Mid-Left Constellation -->
+    <line x1="150" y1="840" x2="250" y2="760"/>
+    <line x1="250" y1="760" x2="320" y2="820"/>
+
+    <!-- Center ambient faint nodes -->
+    <line x1="720" y1="120" x2="780" y2="85"/>
+    <line x1="880" y1="360" x2="940" y2="400"/>
+    <line x1="1170" y1="390" x2="1230" y2="350"/>
+
+    <!-- Right-Side Constellations -->
+    <line x1="1350" y1="460" x2="1420" y2="430"/>
+    <line x1="1420" y1="430" x2="1500" y2="490"/>
+    <line x1="1380" y1="330" x2="1470" y2="300"/>
+    <line x1="1470" y1="300" x2="1540" y2="360"/>
+  </g>
+
+  <!-- Constellation Star Nodes -->
+  <g fill="#FFFFFF">
+    <!-- Bright primary nodes -->
+    <circle cx="80" cy="180" r="2.5" fill-opacity="0.4"/>
+    <circle cx="160" cy="150" r="3" fill-opacity="0.6"/>
+    <circle cx="240" cy="230" r="3.5" fill-opacity="0.8"/>
+    <circle cx="180" cy="310" r="2.5" fill-opacity="0.5"/>
+    <circle cx="350" cy="190" r="2" fill-opacity="0.4"/>
+
+    <circle cx="150" cy="530" r="2.5" fill-opacity="0.3"/>
+    <circle cx="250" cy="760" r="3.5" fill-opacity="0.6"/>
+    <circle cx="168" cy="940" r="2" fill-opacity="0.4"/>
+
+    <!-- Ambient background stars -->
+    <circle cx="780" cy="85" r="3" fill-opacity="0.5"/>
+    <circle cx="490" cy="410" r="2" fill-opacity="0.3"/>
+    <circle cx="880" cy="360" r="2.5" fill-opacity="0.4"/>
+    <circle cx="1170" cy="390" r="3" fill-opacity="0.5"/>
+    <circle cx="1255" cy="710" r="2.5" fill-opacity="0.3"/>
+    <circle cx="1110" cy="880" r="3" fill-opacity="0.4"/>
+
+    <circle cx="1380" cy="330" r="2" fill-opacity="0.4"/>
+    <circle cx="1470" cy="300" r="3.5" fill-opacity="0.7"/>
+    <circle cx="1540" cy="360" r="2" fill-opacity="0.5"/>
+    <circle cx="1350" cy="460" r="2.5" fill-opacity="0.4"/>
+    <circle cx="1420" cy="430" r="3" fill-opacity="0.6"/>
+    <circle cx="1500" cy="490" r="3" fill-opacity="0.6"/>
+    <circle cx="1570" cy="550" r="2" fill-opacity="0.3"/>
+  </g>
+
+  <!-- TOP RIGHT: "Play Now" Button -->
+  <g transform="translate(1390, 36)">
+    <rect width="160" height="46" rx="10" fill="#0A0B10" fill-opacity="0.7" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="80" y="29" fill="#FFFFFF" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="16" letter-spacing="1.5">Play Now</text>
+  </g>
+
+  <!-- MAIN TITLE: "DSA LEGENDS" -->
+  <g transform="translate(800, 315)">
+    <!-- Ambient White/Violet Glow Backdrop -->
+    <text x="0" y="0" text-anchor="middle" fill="#C4B5FD" fill-opacity="0.3" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="96" letter-spacing="18px" filter="url(#titleGlow)">DSA LEGENDS</text>
+    <!-- Crisp Foreground White -->
+    <text x="0" y="0" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="96" letter-spacing="18px">DSA LEGENDS</text>
+  </g>
+
+  <!-- SUBHEADING: "W O R L D   O F   A L G O R I T H M S" -->
+  <text x="800" y="375" text-anchor="middle" fill="#8E9CB2" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14.5" letter-spacing="12px">WORLD OF ALGORITHMS</text>
+
+  <!-- DESCRIPTIVE PARAGRAPH -->
+  <g transform="translate(800, 440)" font-family="system-ui, -apple-system, sans-serif" font-size="19" text-anchor="middle" fill="#9AA4B2">
+    <!-- Line 1 -->
+    <text x="0" y="0">
+      <tspan fill="#8E9CB2">Master </tspan>
+      <tspan fill="#FFFFFF" font-weight="700">Data Structures &amp; Algorithms</tspan>
+      <tspan fill="#8E9CB2"> through an epic RPG adventure. Battle</tspan>
+    </text>
+    <!-- Line 2 -->
+    <text x="0" y="32">
+      <tspan fill="#8E9CB2">bosses, conquer worlds, and rise from </tspan>
+      <tspan fill="#FFFFFF" font-weight="700">Apprentice</tspan>
+      <tspan fill="#8E9CB2"> to </tspan>
+      <tspan fill="#FFFFFF" font-weight="700">DSA Legend</tspan>
+      <tspan fill="#8E9CB2">.</tspan>
+    </text>
+  </g>
+
+  <!-- 4 STAT BOXES (Centered at Y=590) -->
+  <!-- Total width = 4 * 124 + 3 * 22 = 496 + 66 = 562px. Center = 800. Start = 800 - 281 = 519 -->
+  <g transform="translate(519, 590)">
+    <!-- Box 1: 7 WORLDS -->
+    <g transform="translate(0, 0)">
+      <rect width="124" height="106" rx="16" fill="url(#cardBg)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.2"/>
+      <text x="62" y="58" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="36" letter-spacing="-1">7</text>
+      <text x="62" y="82" text-anchor="middle" fill="#6B7280" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" letter-spacing="2px">WORLDS</text>
+    </g>
+
+    <!-- Box 2: 50+ MISSIONS -->
+    <g transform="translate(146, 0)">
+      <rect width="124" height="106" rx="16" fill="url(#cardBg)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.2"/>
+      <text x="62" y="58" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="36" letter-spacing="-1">50+</text>
+      <text x="62" y="82" text-anchor="middle" fill="#6B7280" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" letter-spacing="2px">MISSIONS</text>
+    </g>
+
+    <!-- Box 3: 7 BOSS FIGHTS -->
+    <g transform="translate(292, 0)">
+      <rect width="124" height="106" rx="16" fill="url(#cardBg)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.2"/>
+      <text x="62" y="58" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="36" letter-spacing="-1">7</text>
+      <text x="62" y="82" text-anchor="middle" fill="#6B7280" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.5px">BOSS FIGHTS</text>
+    </g>
+
+    <!-- Box 4: ∞ QUIZZES -->
+    <g transform="translate(438, 0)">
+      <rect width="124" height="106" rx="16" fill="url(#cardBg)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.2"/>
+      <text x="62" y="59" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="44" letter-spacing="0">∞</text>
+      <text x="62" y="82" text-anchor="middle" fill="#6B7280" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" letter-spacing="2px">QUIZZES</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM: "▼ SCROLL TO EXPLORE" -->
+  <text x="800" y="845" text-anchor="middle" fill="#4B5563" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" letter-spacing="4px">
+    <tspan fill="#6366F1" font-size="9">▼ </tspan>SCROLL TO EXPLORE
+  </text>
+</svg>

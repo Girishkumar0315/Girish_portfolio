@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgPred" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="50%" stop-color="#0B1327"/>
+      <stop offset="100%" stop-color="#060A14"/>
+    </linearGradient>
+
+    <!-- Heading Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <!-- Button Gradient -->
+    <linearGradient id="btnPredGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E172A"/>
+      <stop offset="100%" stop-color="#0B1326"/>
+    </linearGradient>
+
+    <!-- Form Container Gradient -->
+    <linearGradient id="formBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B1428"/>
+      <stop offset="100%" stop-color="#070D1B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1600" height="900" fill="url(#bgPred)"/>
+
+  <!-- TOP NAVBAR -->
+  <g transform="translate(0, 0)">
+    <rect width="1600" height="74" fill="#070B16" fill-opacity="0.9" stroke="#1E293B" stroke-width="1"/>
+    
+    <!-- Left Logo & Branding -->
+    <g transform="translate(36, 20)">
+      <!-- Wheat/Corn Sprout Icon -->
+      <g transform="translate(0, 4)">
+        <path d="M 8,24 C 6,16 12,8 18,2 C 18,10 16,18 8,24 Z" fill="#F59E0B"/>
+        <path d="M 12,24 C 18,16 22,8 24,0 C 16,6 12,14 12,24 Z" fill="#10B981"/>
+        <path d="M 10,24 C 8,28 6,32 5,36" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+      <!-- Title -->
+      <text x="36" y="24" fill="#FFFFFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="22" letter-spacing="0.2">Commodity Price Prediction</text>
+      <!-- ML v1.0 Pill Badge -->
+      <rect x="348" y="5" width="76" height="26" rx="6" fill="#1D4ED8"/>
+      <text x="386" y="23" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="700" font-size="12" text-anchor="middle" letter-spacing="0.5">ML v1.0</text>
+    </g>
+
+    <!-- Right Nav Buttons -->
+    <g transform="translate(1220, 18)">
+      <!-- Active "Predict" pill -->
+      <rect x="0" y="0" width="94" height="38" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="47" y="24" fill="#E2E8F0" font-family="system-ui, sans-serif" font-weight="600" font-size="14" text-anchor="middle">Predict</text>
+
+      <text x="140" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-weight="500" font-size="14">Charts</text>
+      <text x="220" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-weight="500" font-size="14">Models</text>
+      <text x="300" y="24" fill="#94A3B8" font-family="system-ui, sans-serif" font-weight="500" font-size="14">Data</text>
+    </g>
+  </g>
+
+  <!-- CENTER HERO TITLE & SUBTITLE -->
+  <g transform="translate(800, 170)" text-anchor="middle">
+    <!-- Big Glowing Heading -->
+    <text x="0" y="0" fill="url(#titleGrad)" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="52" letter-spacing="-0.5" filter="drop-shadow(0 0 16px rgba(56,189,248,0.25))">
+      Commodity Agriculture Price Predictor
+    </text>
+    <text x="0" y="44" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="17" letter-spacing="0.2">
+      ML-powered modal price prediction across 205 commodities &amp; 26 Indian states · Random Forest · R² = 0.9976
+    </text>
+  </g>
+
+  <!-- 5 METRIC KPI CARDS -->
+  <g transform="translate(36, 260)">
+    <!-- Card 1: R2 Score (Emerald Green) -->
+    <g transform="translate(0, 0)">
+      <rect width="288" height="156" rx="18" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="144" y="68" fill="#34D399" font-family="system-ui, sans-serif" font-weight="900" font-size="44" text-anchor="middle" letter-spacing="-0.5">0.9976</text>
+      <text x="144" y="102" fill="#CBD5E1" font-family="system-ui, sans-serif" font-weight="700" font-size="15" text-anchor="middle">R² Score</text>
+      <text x="144" y="128" fill="#64748B" font-family="system-ui, sans-serif" font-weight="500" font-size="13" text-anchor="middle">Random Forest (Best Model)</text>
+    </g>
+
+    <!-- Card 2: Mean Abs. Error (Sky Blue) -->
+    <g transform="translate(310, 0)">
+      <rect width="288" height="156" rx="18" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="144" y="68" fill="#38BDF8" font-family="system-ui, sans-serif" font-weight="900" font-size="44" text-anchor="middle" letter-spacing="-0.5">₹85.87</text>
+      <text x="144" y="102" fill="#CBD5E1" font-family="system-ui, sans-serif" font-weight="700" font-size="15" text-anchor="middle">Mean Abs. Error</text>
+      <text x="144" y="128" fill="#64748B" font-family="system-ui, sans-serif" font-weight="500" font-size="13" text-anchor="middle">Avg prediction error</text>
+    </g>
+
+    <!-- Card 3: Training Samples (Warm Orange) -->
+    <g transform="translate(620, 0)">
+      <rect width="288" height="156" rx="18" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="144" y="68" fill="#FB923C" font-family="system-ui, sans-serif" font-weight="900" font-size="44" text-anchor="middle" letter-spacing="-0.5">5,947</text>
+      <text x="144" y="102" fill="#CBD5E1" font-family="system-ui, sans-serif" font-weight="700" font-size="15" text-anchor="middle">Training Samples</text>
+      <text x="144" y="128" fill="#64748B" font-family="system-ui, sans-serif" font-weight="500" font-size="13" text-anchor="middle">80/20 train-test split</text>
+    </g>
+
+    <!-- Card 4: Commodities (Purple) -->
+    <g transform="translate(930, 0)">
+      <rect width="288" height="156" rx="18" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="144" y="68" fill="#A855F7" font-family="system-ui, sans-serif" font-weight="900" font-size="44" text-anchor="middle" letter-spacing="-0.5">205</text>
+      <text x="144" y="102" fill="#CBD5E1" font-family="system-ui, sans-serif" font-weight="700" font-size="15" text-anchor="middle">Commodities</text>
+      <text x="144" y="128" fill="#64748B" font-family="system-ui, sans-serif" font-weight="500" font-size="13" text-anchor="middle">Wheat, Tomato, Onion...</text>
+    </g>
+
+    <!-- Card 5: Indian States (Coral/Red) -->
+    <g transform="translate(1240, 0)">
+      <rect width="288" height="156" rx="18" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="144" y="68" fill="#F87171" font-family="system-ui, sans-serif" font-weight="900" font-size="44" text-anchor="middle" letter-spacing="-0.5">26</text>
+      <text x="144" y="102" fill="#CBD5E1" font-family="system-ui, sans-serif" font-weight="700" font-size="15" text-anchor="middle">Indian States</text>
+      <text x="144" y="128" fill="#64748B" font-family="system-ui, sans-serif" font-weight="500" font-size="13" text-anchor="middle">Punjab, UP, MP...</text>
+    </g>
+  </g>
+
+  <!-- MAIN PREDICT FORM CONTAINER -->
+  <g transform="translate(36, 450)">
+    <rect width="1528" height="395" rx="20" fill="url(#formBg)" stroke="#1E293B" stroke-width="1.2"/>
+
+    <!-- Form Section Header -->
+    <g transform="translate(32, 42)">
+      <!-- Glowing green status dot -->
+      <circle cx="8" cy="8" r="5" fill="#34D399" filter="drop-shadow(0 0 6px #34D399)"/>
+      <!-- Crystal Ball 🔮 Icon -->
+      <g transform="translate(24, -2)">
+        <circle cx="10" cy="10" r="9" fill="#818CF8" fill-opacity="0.8"/>
+        <path d="M 6,18 L 14,18 L 12,21 L 8,21 Z" fill="#94A3B8"/>
+        <circle cx="7" cy="7" r="2.5" fill="#FFFFFF" opacity="0.7"/>
+      </g>
+      <!-- Title -->
+      <text x="56" y="16" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="800" font-size="20">Predict Modal Price</text>
+    </g>
+
+    <!-- FORM ROW 1: 5 DROPDOWNS -->
+    <g transform="translate(32, 90)">
+      <!-- Field 1: State -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">State</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="500">Andhra Pradesh</text>
+        <path d="M 248,38 L 254,46 L 260,38" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Field 2: District -->
+      <g transform="translate(296, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">District</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="500">Kurnool</text>
+        <path d="M 248,38 L 254,46 L 260,38" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Field 3: Market -->
+      <g transform="translate(592, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Market</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="500">Kurnool APMC</text>
+        <path d="M 248,38 L 254,46 L 260,38" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Field 4: Commodity -->
+      <g transform="translate(888, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Commodity</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="500">Apple</text>
+        <path d="M 248,38 L 254,46 L 260,38" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Field 5: Variety -->
+      <g transform="translate(1184, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Variety</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="500">147 Best</text>
+        <path d="M 248,38 L 254,46 L 260,38" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- FORM ROW 2: GRADE & PRICES -->
+    <g transform="translate(32, 190)">
+      <!-- Field 1: Grade -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Grade</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="500">Grade A</text>
+        <path d="M 248,38 L 254,46 L 260,38" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <!-- Field 2: Min Price -->
+      <g transform="translate(296, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Min Price (₹)</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="600">1500</text>
+      </g>
+
+      <!-- Field 3: Max Price -->
+      <g transform="translate(592, 0)">
+        <text x="0" y="0" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Max Price (₹)</text>
+        <rect x="0" y="10" width="276" height="50" rx="10" fill="#050B17" stroke="#1E293B" stroke-width="1.2"/>
+        <text x="16" y="42" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="15" font-weight="600">2500</text>
+      </g>
+    </g>
+
+    <!-- BIG FULL WIDTH PREDICT BUTTON -->
+    <g transform="translate(32, 305)">
+      <rect width="1464" height="60" rx="14" fill="url(#btnPredGrad)" filter="drop-shadow(0 6px 20px rgba(16,185,129,0.3))"/>
+      <!-- Lightning bolt icon -->
+      <path d="M 680,30 L 690,16 L 684,28 L 696,28 L 682,44 L 686,32 Z" fill="#FBBF24" transform="translate(-10, 0)"/>
+      <text x="732" y="38" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="18" text-anchor="middle" letter-spacing="0.5">
+        Predict Modal Price
+      </text>
+    </g>
+  </g>
+</svg>

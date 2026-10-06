@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="treeBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#180D35"/>
+      <stop offset="100%" stop-color="#080312"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#treeBg)"/>
+  <!-- Grid -->
+  <g stroke="#301A5E" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <!-- Header -->
+  <g transform="translate(40, 35)">
+    <text x="0" y="24" fill="#00F0FF" font-family="system-ui, sans-serif" font-weight="800" font-size="20">BST REBALANCING ARENA</text>
+    <text x="0" y="48" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">AVL Rotations &amp; Red-Black Tree Balancing</text>
+  </g>
+  <!-- Tree Nodes -->
+  <g transform="translate(400, 260)">
+    <path d="M 0,-100 L -140,0 M 0,-100 L 140,0" stroke="#A855F7" stroke-width="3"/>
+    <path d="M -140,0 L -210,100 M -140,0 L -70,100" stroke="#00F0FF" stroke-width="2.5"/>
+    <path d="M 140,0 L 70,100 M 140,0 L 210,100" stroke="#EC4899" stroke-width="2.5"/>
+
+    <circle cx="0" cy="-100" r="36" fill="#1C0F38" stroke="#A855F7" stroke-width="3"/>
+    <text x="0" y="-92" fill="#FFFFFF" font-family="monospace" font-weight="900" font-size="22" text-anchor="middle">42</text>
+
+    <circle cx="-140" cy="0" r="30" fill="#1C0F38" stroke="#00F0FF" stroke-width="3"/>
+    <text x="-140" y="8" fill="#00F0FF" font-family="monospace" font-weight="900" font-size="20" text-anchor="middle">21</text>
+
+    <circle cx="140" cy="0" r="30" fill="#1C0F38" stroke="#EC4899" stroke-width="3"/>
+    <text x="140" y="8" fill="#EC4899" font-family="monospace" font-weight="900" font-size="20" text-anchor="middle">67</text>
+
+    <circle cx="-210" cy="100" r="24" fill="#1C0F38" stroke="#94A3B8" stroke-width="2"/>
+    <text x="-210" y="106" fill="#FFFFFF" font-family="monospace" font-weight="700" font-size="16" text-anchor="middle">9</text>
+
+    <circle cx="-70" cy="100" r="24" fill="#1C0F38" stroke="#94A3B8" stroke-width="2"/>
+    <text x="-70" y="106" fill="#FFFFFF" font-family="monospace" font-weight="700" font-size="16" text-anchor="middle">33</text>
+
+    <circle cx="70" cy="100" r="24" fill="#1C0F38" stroke="#94A3B8" stroke-width="2"/>
+    <text x="70" y="106" fill="#FFFFFF" font-family="monospace" font-weight="700" font-size="16" text-anchor="middle">55</text>
+
+    <circle cx="210" cy="100" r="24" fill="#1C0F38" stroke="#94A3B8" stroke-width="2"/>
+    <text x="210" y="106" fill="#FFFFFF" font-family="monospace" font-weight="700" font-size="16" text-anchor="middle">89</text>
+  </g>
+  <!-- Traversal Log Badge -->
+  <g transform="translate(40, 500)">
+    <rect width="720" height="50" rx="12" fill="#150C2A" stroke="#371E68" stroke-width="1.2"/>
+    <text x="24" y="32" fill="#A78BFA" font-family="monospace" font-size="14" font-weight="600">In-Order: [9, 21, 33, 42, 55, 67, 89] • Balanced: YES</text>
+  </g>
+</svg>

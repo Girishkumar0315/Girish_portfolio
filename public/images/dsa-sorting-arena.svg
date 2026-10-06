@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="sortBg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1A0C2E"/>
+      <stop offset="100%" stop-color="#080214"/>
+    </radialGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="pivotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#9F1239"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sortBg)"/>
+  <!-- Header -->
+  <g transform="translate(40, 35)">
+    <text x="0" y="24" fill="#EC4899" font-family="system-ui, sans-serif" font-weight="800" font-size="20">ALGORITHMIC GRAPH ARENA</text>
+    <text x="0" y="48" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Dijkstra Shortest Path &amp; Merge Sort Visualizer</text>
+  </g>
+  <!-- Sorting Bars Visualization -->
+  <g transform="translate(40, 140)">
+    <!-- Bars -->
+    <rect x="20" y="160" width="36" height="180" rx="6" fill="url(#barGrad)"/>
+    <rect x="70" y="220" width="36" height="120" rx="6" fill="url(#barGrad)"/>
+    <rect x="120" y="90" width="36" height="250" rx="6" fill="url(#barGrad)"/>
+    <rect x="170" y="40" width="36" height="300" rx="6" fill="url(#pivotGrad)"/>
+    <rect x="220" y="180" width="36" height="160" rx="6" fill="url(#barGrad)"/>
+    <rect x="270" y="130" width="36" height="210" rx="6" fill="url(#barGrad)"/>
+    <rect x="320" y="260" width="36" height="80" rx="6" fill="url(#barGrad)"/>
+    <rect x="370" y="110" width="36" height="230" rx="6" fill="url(#barGrad)"/>
+
+    <!-- Values under bars -->
+    <g fill="#A78BFA" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">
+      <text x="38" y="370">34</text>
+      <text x="88" y="370">21</text>
+      <text x="138" y="370">56</text>
+      <text x="188" y="370" fill="#F43F5E">88</text>
+      <text x="238" y="370">40</text>
+      <text x="288" y="370">51</text>
+      <text x="338" y="370">15</text>
+      <text x="388" y="370">53</text>
+    </g>
+
+    <!-- Side Graph Nodes preview -->
+    <g transform="translate(480, 20)">
+      <rect width="220" height="340" rx="16" fill="#130B22" stroke="#3D206B" stroke-width="1.2"/>
+      <text x="20" y="32" fill="#00F0FF" font-family="system-ui, sans-serif" font-weight="700" font-size="13">SHORTEST PATH</text>
+      
+      <!-- Graph path -->
+      <line x1="60" y1="90" x2="160" y2="130" stroke="#00F0FF" stroke-width="2"/>
+      <line x1="60" y1="90" x2="80" y2="220" stroke="#A855F7" stroke-width="2"/>
+      <line x1="160" y1="130" x2="150" y2="270" stroke="#00F0FF" stroke-width="2.5"/>
+      <line x1="80" y1="220" x2="150" y2="270" stroke="#6D28D9" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+      <circle cx="60" cy="90" r="18" fill="#1E1236" stroke="#00F0FF" stroke-width="2"/>
+      <text x="60" y="95" fill="#FFFFFF" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle">A</text>
+
+      <circle cx="160" cy="130" r="18" fill="#1E1236" stroke="#00F0FF" stroke-width="2"/>
+      <text x="160" y="135" fill="#FFFFFF" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle">B</text>
+
+      <circle cx="80" cy="220" r="18" fill="#1E1236" stroke="#A855F7" stroke-width="2"/>
+      <text x="80" y="225" fill="#FFFFFF" font-family="monospace" font-size="12" font-weight="700" text-anchor="middle">C</text>
+
+      <circle cx="150" cy="270" r="22" fill="#1E1236" stroke="#10B981" stroke-width="2.5"/>
+      <text x="150" y="275" fill="#10B981" font-family="monospace" font-size="12" font-weight="800" text-anchor="middle">GOAL</text>
+
+      <text x="20" y="320" fill="#10B981" font-family="monospace" font-size="12">Cost: 14 • Path Found!</text>
+    </g>
+  </g>
+  <!-- Bottom Status -->
+  <g transform="translate(40, 520)">
+    <rect width="720" height="42" rx="10" fill="#130826" stroke="#2B144E" stroke-width="1"/>
+    <text x="20" y="26" fill="#F43F5E" font-family="system-ui, sans-serif" font-size="13" font-weight="700">COMPARING: arr[3] (88) &gt; arr[4] (40) → SWAPPING</text>
+  </g>
+</svg>

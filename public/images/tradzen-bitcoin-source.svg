@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1066" width="1600" height="1066">
+  <defs>
+    <!-- Background Ambient Gradient -->
+    <radialGradient id="pcbAmbient" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#2D1104"/>
+      <stop offset="30%" stop-color="#1A0A02"/>
+      <stop offset="70%" stop-color="#090504"/>
+      <stop offset="100%" stop-color="#03080F"/>
+    </radialGradient>
+
+    <!-- Center Orange Core Glow -->
+    <radialGradient id="coreGlow" cx="50%" cy="45%" r="35%">
+      <stop offset="0%" stop-color="#FF6D00" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#FF3D00" stop-opacity="0.6"/>
+      <stop offset="75%" stop-color="#DD2C00" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF3D00" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Golden Coin Radial Gradient -->
+    <radialGradient id="goldCoinGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF5B8"/>
+      <stop offset="25%" stop-color="#FFD54F"/>
+      <stop offset="60%" stop-color="#FFA000"/>
+      <stop offset="85%" stop-color="#FF6F00"/>
+      <stop offset="100%" stop-color="#8D3B00"/>
+    </radialGradient>
+
+    <!-- Gold ₿ Symbol Gradient -->
+    <linearGradient id="btcSymbolGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDE7"/>
+      <stop offset="40%" stop-color="#FFE082"/>
+      <stop offset="75%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+
+    <!-- Cyan Ambient Top Rim -->
+    <linearGradient id="cyanRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#00B0FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1600" height="1066" fill="url(#pcbAmbient)"/>
+
+  <!-- Cyan Top Rim Ambient Lighting -->
+  <rect x="0" y="0" width="1600" height="180" fill="url(#cyanRim)"/>
+
+  <!-- PERSPECTIVE CIRCUIT BOARD TRACES & HEATSPREADERS -->
+  <g transform="translate(0, 0)">
+    <!-- Top Bus Lines & IC blocks -->
+    <g fill="#0D1A24" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.3">
+      <rect x="200" y="40" width="1200" height="40" rx="4"/>
+      <rect x="350" y="90" width="900" height="30" rx="4"/>
+      <!-- Glowing blue traces -->
+      <line x1="300" y1="20" x2="300" y2="80" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.6"/>
+      <line x1="500" y1="20" x2="500" y2="110" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.6"/>
+      <line x1="800" y1="10" x2="800" y2="120" stroke="#00E5FF" stroke-width="3" stroke-opacity="0.8"/>
+      <line x1="1100" y1="20" x2="1100" y2="110" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.6"/>
+      <line x1="1300" y1="20" x2="1300" y2="80" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.6"/>
+    </g>
+
+    <!-- LEFT & RIGHT COMPONENT ARRAYS & HEAT SINKS -->
+    <!-- Left arrays -->
+    <g fill="#160803" stroke="#FF6D00" stroke-width="1.2">
+      <!-- Outer bus lanes -->
+      <path d="M 60,160 L 260,160 L 300,340 L 160,340 L 120,680 L 260,680 L 290,920 L 60,920 Z" fill="#0F0502" stroke="#FF3D00" stroke-width="2" stroke-opacity="0.5"/>
+      <!-- SMT Capacitors -->
+      <g fill="#210C04" stroke="#FF9100" stroke-width="1.5">
+        <rect x="80" y="220" width="60" height="18" rx="3"/><rect x="80" y="250" width="60" height="18" rx="3"/>
+        <rect x="80" y="280" width="60" height="18" rx="3"/><rect x="80" y="380" width="60" height="18" rx="3"/>
+        <rect x="80" y="410" width="60" height="18" rx="3"/><rect x="80" y="440" width="60" height="18" rx="3"/>
+        <rect x="80" y="540" width="60" height="18" rx="3"/><rect x="80" y="570" width="60" height="18" rx="3"/>
+        <rect x="80" y="600" width="60" height="18" rx="3"/><rect x="80" y="720" width="60" height="18" rx="3"/>
+        <rect x="80" y="750" width="60" height="18" rx="3"/><rect x="80" y="780" width="60" height="18" rx="3"/>
+      </g>
+      <!-- Radiating traces -->
+      <path d="M 180,240 L 340,240 L 440,360 L 520,360" fill="none" stroke="#FF6D00" stroke-width="3"/>
+      <path d="M 180,420 L 320,420 L 420,450 L 500,450" fill="none" stroke="#FF9100" stroke-width="3"/>
+      <path d="M 180,580 L 340,580 L 440,540 L 520,540" fill="none" stroke="#FF6D00" stroke-width="3"/>
+      <path d="M 180,740 L 320,740 L 420,650 L 500,650" fill="none" stroke="#FF3D00" stroke-width="3"/>
+    </g>
+
+    <!-- Right arrays -->
+    <g fill="#160803" stroke="#FF6D00" stroke-width="1.2">
+      <path d="M 1540,160 L 1340,160 L 1300,340 L 1440,340 L 1480,680 L 1340,680 L 1310,920 L 1540,920 Z" fill="#0F0502" stroke="#FF3D00" stroke-width="2" stroke-opacity="0.5"/>
+      <g fill="#210C04" stroke="#FF9100" stroke-width="1.5">
+        <rect x="1460" y="220" width="60" height="18" rx="3"/><rect x="1460" y="250" width="60" height="18" rx="3"/>
+        <rect x="1460" y="280" width="60" height="18" rx="3"/><rect x="1460" y="380" width="60" height="18" rx="3"/>
+        <rect x="1460" y="410" width="60" height="18" rx="3"/><rect x="1460" y="440" width="60" height="18" rx="3"/>
+        <rect x="1460" y="540" width="60" height="18" rx="3"/><rect x="1460" y="570" width="60" height="18" rx="3"/>
+        <rect x="1460" y="600" width="60" height="18" rx="3"/><rect x="1460" y="720" width="60" height="18" rx="3"/>
+        <rect x="1460" y="750" width="60" height="18" rx="3"/><rect x="1460" y="780" width="60" height="18" rx="3"/>
+      </g>
+      <!-- Radiating traces -->
+      <path d="M 1420,240 L 1260,240 L 1160,360 L 1080,360" fill="none" stroke="#FF6D00" stroke-width="3"/>
+      <path d="M 1420,420 L 1280,420 L 1180,450 L 1100,450" fill="none" stroke="#FF9100" stroke-width="3"/>
+      <path d="M 1420,580 L 1260,580 L 1160,540 L 1080,540" fill="none" stroke="#FF6D00" stroke-width="3"/>
+      <path d="M 1420,740 L 1280,740 L 1180,650 L 1100,650" fill="none" stroke="#FF3D00" stroke-width="3"/>
+    </g>
+
+    <!-- BOTTOM MOTHERBOARD CONNECTOR PINS & TRACES -->
+    <g transform="translate(450, 740)">
+      <!-- Golden connector pin rows -->
+      <g fill="#FFA000" stroke="#FF6F00" stroke-width="1.5">
+        <rect x="40" y="20" width="14" height="60" rx="3"/>
+        <rect x="80" y="20" width="14" height="60" rx="3"/>
+        <rect x="120" y="20" width="14" height="60" rx="3"/>
+        <rect x="160" y="20" width="14" height="60" rx="3"/>
+        <rect x="200" y="20" width="14" height="60" rx="3"/>
+        <rect x="240" y="20" width="14" height="60" rx="3"/>
+        <rect x="280" y="20" width="14" height="60" rx="3"/>
+        <rect x="320" y="20" width="14" height="60" rx="3"/>
+        <rect x="360" y="20" width="14" height="60" rx="3"/>
+        <rect x="400" y="20" width="14" height="60" rx="3"/>
+        <rect x="440" y="20" width="14" height="60" rx="3"/>
+        <rect x="480" y="20" width="14" height="60" rx="3"/>
+        <rect x="520" y="20" width="14" height="60" rx="3"/>
+        <rect x="560" y="20" width="14" height="60" rx="3"/>
+        <rect x="600" y="20" width="14" height="60" rx="3"/>
+        <rect x="640" y="20" width="14" height="60" rx="3"/>
+      </g>
+      <!-- Bottom bus lanes -->
+      <path d="M 0,100 L 700,100" stroke="#FF6D00" stroke-width="4"/>
+      <path d="M 0,125 L 700,125" stroke="#FF3D00" stroke-width="3"/>
+      <path d="M 0,150 L 700,150" stroke="#FF9100" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- CENTRAL GLOWING CPU SOCKET & BITCOIN CHIP -->
+  <g transform="translate(800, 460)">
+    <!-- Intense Radiant Core Glow -->
+    <circle cx="0" cy="0" r="420" fill="url(#coreGlow)"/>
+
+    <!-- Octagonal / Square Motherboard Socket Frame -->
+    <rect x="-240" y="-240" width="480" height="480" rx="28" fill="#140602" stroke="#FF6D00" stroke-width="6" filter="drop-shadow(0 0 25px rgba(255,109,0,0.8))"/>
+    <rect x="-210" y="-210" width="420" height="420" rx="20" fill="#0C0301" stroke="#FF9100" stroke-width="2.5"/>
+
+    <!-- Concentric Gold Ring Base -->
+    <circle cx="0" cy="0" r="190" fill="#2E1004" stroke="#FFA000" stroke-width="5"/>
+    <circle cx="0" cy="0" r="175" fill="url(#goldCoinGrad)" stroke="#FFB300" stroke-width="2" filter="drop-shadow(0 0 35px rgba(255,179,0,0.6))"/>
+
+    <!-- Milled Edge Notches (Perimeter Teeth) -->
+    <g stroke="#8D3B00" stroke-width="2">
+      <line x1="0" y1="-175" x2="0" y2="-163"/>
+      <line x1="123" y1="-123" x2="114" y2="-114"/>
+      <line x1="175" y1="0" x2="163" y2="0"/>
+      <line x1="123" y1="123" x2="114" y2="114"/>
+      <line x1="0" y1="175" x2="0" y2="163"/>
+      <line x1="-123" y1="123" x2="-114" y2="114"/>
+      <line x1="-175" y1="0" x2="-163" y2="0"/>
+      <line x1="-123" y1="-123" x2="-114" y2="-114"/>
+    </g>
+
+    <!-- Outer Circular Text Ring Border -->
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#FFE082" stroke-width="3" stroke-dasharray="8,4"/>
+    <circle cx="0" cy="0" r="135" fill="#5D2602" stroke="#FFA000" stroke-width="2"/>
+
+    <!-- Microchip Circuit Traces radiating from inside coin -->
+    <g stroke="#FFE082" stroke-width="2" opacity="0.85">
+      <path d="M -80,-80 L -50,-80 L -30,-50 L 0,-50"/>
+      <path d="M 80,-80 L 50,-80 L 30,-50 L 0,-50"/>
+      <path d="M -80,80 L -50,80 L -30,50 L 0,50"/>
+      <path d="M 80,80 L 50,80 L 30,50 L 0,50"/>
+      <path d="M -110,0 L -70,0 L -50,-20 L -30,-20"/>
+      <path d="M 110,0 L 70,0 L 50,20 L 30,20"/>
+      <!-- Tiny microchip junction nodes -->
+      <circle cx="-50" cy="-80" r="3" fill="#FFFDE7"/>
+      <circle cx="50" cy="-80" r="3" fill="#FFFDE7"/>
+      <circle cx="-50" cy="80" r="3" fill="#FFFDE7"/>
+      <circle cx="50" cy="80" r="3" fill="#FFFDE7"/>
+      <circle cx="-70" cy="0" r="3" fill="#FFFDE7"/>
+      <circle cx="70" cy="0" r="3" fill="#FFFDE7"/>
+    </g>
+
+    <!-- INNER EMBOSSED ₿ BITCOIN LOGO -->
+    <g transform="translate(-2, 4)">
+      <!-- Drop Shadow -->
+      <path d="
+        M -36,-75 L 12,-75 C 38,-75 52,-62 52,-42 C 52,-28 42,-18 28,-14 C 46,-10 58,4 58,24 C 58,50 38,65 8,65 L -36,65 Z
+        M -12,-55 L -12,-22 L 8,-22 C 22,-22 30,-28 30,-38 C 30,-48 22,-55 8,-55 Z
+        M -12,-6 L -12,45 L 12,45 C 26,45 36,38 36,20 C 36,2 26,-6 12,-6 Z
+      " fill="#3E1700" transform="translate(4, 4)"/>
+
+      <!-- Vertical Spines (Top & Bottom Prongs) -->
+      <g fill="url(#btcSymbolGrad)">
+        <rect x="-16" y="-95" width="9" height="24" rx="2"/>
+        <rect x="8" y="-95" width="9" height="24" rx="2"/>
+        <rect x="-16" y="60" width="9" height="24" rx="2"/>
+        <rect x="8" y="60" width="9" height="24" rx="2"/>
+      </g>
+
+      <!-- Main ₿ Character Body -->
+      <path d="
+        M -36,-75 L 12,-75 C 38,-75 52,-62 52,-42 C 52,-28 42,-18 28,-14 C 46,-10 58,4 58,24 C 58,50 38,65 8,65 L -36,65 Z
+        M -12,-55 L -12,-22 L 8,-22 C 22,-22 30,-28 30,-38 C 30,-48 22,-55 8,-55 Z
+        M -12,-6 L -12,45 L 12,45 C 26,45 36,38 36,20 C 36,2 26,-6 12,-6 Z
+      " fill="url(#btcSymbolGrad)" stroke="#FFFDE7" stroke-width="2.5" filter="drop-shadow(0 0 10px rgba(255,238,88,0.8))"/>
+    </g>
+  </g>
+</svg>

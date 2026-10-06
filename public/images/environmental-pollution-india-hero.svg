@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B18"/>
+      <stop offset="40%" stop-color="#08122A"/>
+      <stop offset="80%" stop-color="#040916"/>
+      <stop offset="100%" stop-color="#02050D"/>
+    </linearGradient>
+
+    <!-- Cyan Glow -->
+    <radialGradient id="cyanGlow" cx="72%" cy="46%" r="45%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#0066FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#050B18" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Left Ambient Glow -->
+    <radialGradient id="leftGlow" cx="15%" cy="35%" r="30%">
+      <stop offset="0%" stop-color="#00B4D8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#050B18" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Button Gradient -->
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0070F3"/>
+      <stop offset="100%" stop-color="#0051C6"/>
+    </linearGradient>
+
+    <!-- Dot Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#00D2FF" fill-opacity="0.22"/>
+    </pattern>
+
+    <!-- Portal Clip Path -->
+    <clipPath id="circleClip">
+      <circle cx="1400" cy="460" r="310" />
+    </clipPath>
+
+    <!-- Cloud Icon Gradient -->
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E1A38" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#070E22" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Dark Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glows -->
+  <rect width="1920" height="1080" fill="url(#cyanGlow)" />
+  <rect width="1920" height="1080" fill="url(#leftGlow)" />
+
+  <!-- Dot Matrix Grids (Left & Right margins) -->
+  <rect x="0" y="60" width="160" height="960" fill="url(#dotGrid)" opacity="0.6"/>
+  <rect x="1800" y="60" width="120" height="960" fill="url(#dotGrid)" opacity="0.4"/>
+
+  <!-- Top-left concentric radar arcs -->
+  <g opacity="0.35" stroke="#00D2FF" stroke-width="1.2" fill="none">
+    <ellipse cx="0" cy="0" rx="280" ry="240" stroke-dasharray="6,6"/>
+    <ellipse cx="0" cy="0" rx="380" ry="320"/>
+    <ellipse cx="0" cy="0" rx="480" ry="400" stroke-dasharray="4,8"/>
+  </g>
+
+  <!-- TOP BAR: CLOUD LOGO (Left) & PARTNERS (Right) -->
+  <g transform="translate(110, 80)">
+    <!-- Cloud Outline with Bars inside -->
+    <path d="M42,50 C36,50 30,46 27,40 C21,41 16,36 17,30 C12,28 10,22 13,17 C16,11 23,10 27,12 C30,5 39,2 46,5 C52,7 56,12 57,18 C63,18 68,23 67,29 C72,33 71,41 66,45 C63,48 58,50 53,50 Z" 
+          fill="none" stroke="url(#cloudGrad)" stroke-width="3" filter="drop-shadow(0px 0px 8px #00D2FF)"/>
+    <!-- 3 Data Bars inside cloud -->
+    <rect x="33" y="30" width="4" height="13" rx="2" fill="#00E5FF"/>
+    <rect x="41" y="22" width="4" height="21" rx="2" fill="#00E5FF"/>
+    <rect x="49" y="26" width="4" height="17" rx="2" fill="#00E5FF"/>
+  </g>
+
+  <!-- TOP-RIGHT BADGES (data.gov.in, in, github) -->
+  <g transform="translate(1360, 45)">
+    <!-- data.gov.in badge -->
+    <rect x="0" y="0" width="245" height="90" rx="4" fill="#0E2145" stroke="#00D2FF" stroke-width="2" stroke-opacity="0.5"/>
+    <text x="30" y="52" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34">data.gov</text>
+    <circle cx="198" cy="40" r="19" fill="#FFC700"/>
+    <text x="189" y="47" fill="#0E2145" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22">in</text>
+    <text x="32" y="74" fill="#8FAECF" font-family="system-ui, -apple-system, sans-serif" font-size="9" letter-spacing="0.5">Open Government Data (OGD) Platform India</text>
+
+    <!-- LinkedIn round badge -->
+    <circle cx="295" cy="45" r="44" fill="#0077B5" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="278" y="58" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="40">in</text>
+
+    <!-- GitHub round badge -->
+    <circle cx="410" cy="45" r="44" fill="#FFFFFF" stroke="#00D2FF" stroke-width="2"/>
+    <path d="M410,18 C395,18 382,31 382,46 C382,58 390,68 401,72 C402,72 403,71 403,71 L403,66 C394,68 392,62 392,62 C391,59 389,58 389,58 C386,56 389,56 389,56 C392,56 394,59 394,59 C397,64 402,63 404,62 C404,60 405,58 406,57 C399,56 391,53 391,41 C391,37 392,34 395,32 C394,31 393,28 395,24 C395,24 398,23 404,27 C406,26 408,26 410,26 C412,26 414,26 416,27 C422,23 425,24 425,24 C427,28 426,31 425,32 C428,34 429,37 429,41 C429,53 421,56 414,57 C415,58 417,61 417,65 L417,71 C417,71 418,72 419,72 C430,68 438,58 438,46 C438,31 425,18 410,18 Z" fill="#0C0C0C"/>
+  </g>
+
+  <!-- MAIN TITLE (LEFT) -->
+  <g transform="translate(110, 240)">
+    <text x="0" y="60" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" letter-spacing="-1">ENVIRONMENTAL</text>
+    <text x="0" y="145" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" letter-spacing="-1">POLLUTION</text>
+    <text x="0" y="235" fill="#00D2FF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="76" letter-spacing="-1" filter="drop-shadow(0px 0px 14px rgba(0,210,255,0.4))">DASHBOARD-INDIA</text>
+    
+    <!-- Accent Line -->
+    <rect x="0" y="265" width="130" height="6" rx="3" fill="#00D2FF" />
+
+    <!-- Subtitle & Description -->
+    <text x="0" y="325" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="28" letter-spacing="0.2">Real Insights. Cleaner Tomorrow.</text>
+    
+    <text x="0" y="380" fill="#9FB2C8" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="19" letter-spacing="0.2">Explore interactive insights on environmental pollution across India.</text>
+    <text x="0" y="412" fill="#9FB2C8" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="19" letter-spacing="0.2">Analyze trends, track pollutants, and support data-driven decisions</text>
+    <text x="0" y="444" fill="#9FB2C8" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="19" letter-spacing="0.2">for a healthier environment.</text>
+  </g>
+
+  <!-- 4 FEATURE ICONS ROW -->
+  <g transform="translate(110, 760)">
+    <!-- 1. OVERVIEW -->
+    <g transform="translate(0, 0)">
+      <circle cx="42" cy="42" r="38" fill="#0A1835" stroke="#00D2FF" stroke-width="2.5"/>
+      <!-- Bar chart icon inside -->
+      <rect x="25" y="40" width="6" height="18" rx="2" fill="#00D2FF"/>
+      <rect x="39" y="28" width="6" height="30" rx="2" fill="#00D2FF"/>
+      <rect x="53" y="34" width="6" height="24" rx="2" fill="#00D2FF"/>
+      
+      <text x="42" y="112" fill="#00D2FF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="17" text-anchor="middle" letter-spacing="1">OVERVIEW</text>
+      <text x="42" y="136" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Key metrics and pollutant</text>
+      <text x="42" y="156" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">summary at a glance</text>
+    </g>
+
+    <!-- 2. ANALYSIS -->
+    <g transform="translate(240, 0)">
+      <circle cx="42" cy="42" r="38" fill="#1C1438" stroke="#A855F7" stroke-width="2.5"/>
+      <!-- Line chart / node icon -->
+      <circle cx="28" cy="48" r="4" fill="#C084FC"/>
+      <circle cx="44" cy="30" r="4" fill="#C084FC"/>
+      <circle cx="58" cy="42" r="4" fill="#C084FC"/>
+      <line x1="28" y1="48" x2="44" y2="30" stroke="#C084FC" stroke-width="2.5"/>
+      <line x1="44" y1="30" x2="58" y2="42" stroke="#C084FC" stroke-width="2.5"/>
+
+      <text x="42" y="112" fill="#C084FC" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="17" text-anchor="middle" letter-spacing="1">ANALYSIS</text>
+      <text x="42" y="136" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Deep dive into trends</text>
+      <text x="42" y="156" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">and distributions</text>
+    </g>
+
+    <!-- 3. TRENDS -->
+    <g transform="translate(480, 0)">
+      <circle cx="42" cy="42" r="38" fill="#0A1835" stroke="#00D2FF" stroke-width="2.5"/>
+      <!-- Calendar grid icon -->
+      <rect x="26" y="26" width="32" height="30" rx="4" fill="none" stroke="#00D2FF" stroke-width="2.5"/>
+      <line x1="26" y1="36" x2="58" y2="36" stroke="#00D2FF" stroke-width="2"/>
+      <circle cx="34" cy="44" r="2" fill="#00D2FF"/>
+      <circle cx="42" cy="44" r="2" fill="#00D2FF"/>
+      <circle cx="50" cy="44" r="2" fill="#00D2FF"/>
+
+      <text x="42" y="112" fill="#00D2FF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="17" text-anchor="middle" letter-spacing="1">TRENDS</text>
+      <text x="42" y="136" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Track changes over time</text>
+      <text x="42" y="156" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">with visual analytics</text>
+    </g>
+
+    <!-- 4. BETTER FUTURE -->
+    <g transform="translate(720, 0)">
+      <circle cx="42" cy="42" r="38" fill="#09241E" stroke="#10B981" stroke-width="2.5"/>
+      <!-- Eco Leaf Icon -->
+      <path d="M42,24 C30,24 26,38 28,54 C44,56 58,52 58,40 C58,28 50,24 42,24 Z" fill="none" stroke="#34D399" stroke-width="2.5"/>
+      <line x1="28" y1="54" x2="48" y2="34" stroke="#34D399" stroke-width="2"/>
+
+      <text x="42" y="112" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="17" text-anchor="middle" letter-spacing="1">BETTER FUTURE</text>
+      <text x="42" y="136" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Insights for a cleaner</text>
+      <text x="42" y="156" fill="#889BB0" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">and healthier tomorrow</text>
+    </g>
+  </g>
+
+  <!-- RIGHT HERO PORTAL: CIRCULAR APERTURE WITH CLEAN SKYLINE & FOLIAGE -->
+  <!-- Outer Orbits and Radial Rings -->
+  <g stroke="#00D2FF" fill="none">
+    <circle cx="1400" cy="460" r="380" stroke-width="1.5" stroke-opacity="0.25" stroke-dasharray="10,16"/>
+    <circle cx="1400" cy="460" r="350" stroke-width="2" stroke-opacity="0.6"/>
+    <circle cx="1400" cy="460" r="322" stroke-width="1" stroke-opacity="0.4"/>
+    <circle cx="1400" cy="460" r="312" stroke-width="5" stroke="#00E5FF" stroke-opacity="0.9" filter="drop-shadow(0 0 12px #00E5FF)"/>
+    
+    <!-- Orbital Nodes -->
+    <circle cx="1750" cy="460" r="5" fill="#00E5FF"/>
+    <circle cx="1400" cy="110" r="5" fill="#00E5FF"/>
+    <circle cx="1050" cy="460" r="5" fill="#00E5FF"/>
+    <circle cx="1647" cy="213" r="4" fill="#00E5FF"/>
+  </g>
+
+  <!-- Cityscape Silhouette Backdrop behind circle -->
+  <g fill="#061226" opacity="0.6">
+    <rect x="960" y="620" width="30" height="200"/>
+    <rect x="1000" y="580" width="40" height="240"/>
+    <rect x="1050" y="640" width="35" height="180"/>
+    <rect x="1100" y="560" width="50" height="260"/>
+    <rect x="1680" y="590" width="40" height="230"/>
+    <rect x="1730" y="630" width="35" height="190"/>
+    <rect x="1775" y="570" width="50" height="250"/>
+  </g>
+
+  <!-- CIRCULAR PORTAL IMAGE (Vibrant Clean Green Skyline with Sunbeam) -->
+  <g clip-path="url(#circleClip)">
+    <image href="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" 
+           x="1050" y="120" width="700" height="700" preserveAspectRatio="xMidYMid slice"/>
+    <!-- Subtle Golden Sun Flare overlay in Portal -->
+    <circle cx="1630" cy="420" r="140" fill="#FFD166" opacity="0.45" filter="blur(20px)"/>
+    <rect x="1090" y="150" width="620" height="620" fill="#004499" opacity="0.15" mix-blend-mode="overlay"/>
+  </g>
+
+  <!-- BOTTOM RIGHT BUTTON & PROFILE -->
+  <g transform="translate(1230, 830)">
+    <!-- Glowing Capsule ENTER DASHBOARD Button -->
+    <rect x="0" y="0" width="510" height="92" rx="20" fill="url(#btnGrad)" filter="drop-shadow(0 8px 24px rgba(0,112,243,0.5))"/>
+    
+    <!-- Arrow inside button -->
+    <g transform="translate(60, 46)">
+      <line x1="0" y1="0" x2="36" y2="0" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      <polyline points="24,-12 36,0 24,12" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <text x="135" y="57" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="32" letter-spacing="1.5">ENTER DASHBOARD</text>
+    
+    <!-- User Profile Tag below button -->
+    <g transform="translate(120, 142)">
+      <!-- Divider line left -->
+      <line x1="-80" y1="0" x2="-20" y2="0" stroke="#00D2FF" stroke-width="1.5" opacity="0.4"/>
+      <!-- User profile icon -->
+      <circle cx="0" cy="-4" r="10" fill="none" stroke="#00D2FF" stroke-width="2.5"/>
+      <path d="M-15,14 C-15,5 -7,4 0,4 C7,4 15,5 15,14" fill="none" stroke="#00D2FF" stroke-width="2.5"/>
+      <!-- Name -->
+      <text x="32" y="7" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="26">Girish Kumar</text>
+      <!-- Divider line right -->
+      <line x1="210" y1="0" x2="270" y2="0" stroke="#00D2FF" stroke-width="1.5" opacity="0.4"/>
+    </g>
+  </g>
+</svg>

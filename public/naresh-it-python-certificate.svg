@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Great+Vibes&amp;family=Montserrat:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,600;1,700&amp;display=swap");
+      .cls-serif { font-family: 'Playfair Display', Georgia, serif; }
+      .cls-sans { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .cls-script { font-family: 'Great Vibes', cursive, 'Brush Script MT'; }
+    </style>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626" />
+      <stop offset="50%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+    <pattern id="nitWatermark" width="160" height="90" patternUnits="userSpaceOnUse">
+      <text x="35" y="45" font-family="'Montserrat', sans-serif" font-weight="700" font-size="28" fill="#f1f5f9" letter-spacing="1">NIT</text>
+    </pattern>
+  </defs>
+
+  <!-- Background White Paper -->
+  <rect width="1600" height="1100" fill="#ffffff" />
+  
+  <!-- NIT Repeating Watermark Pattern -->
+  <rect width="1600" height="1100" fill="url(#nitWatermark)" />
+
+  <!-- Outer Border Frame with notched corners matching original -->
+  <rect x="25" y="25" width="1550" height="1050" fill="none" stroke="#e2e8f0" stroke-width="4" rx="16" />
+  <rect x="35" y="35" width="1530" height="1030" fill="none" stroke="#cbd5e1" stroke-width="1.5" rx="12" />
+
+  <!-- Left Side Red Ribbon Fold Ornament -->
+  <path d="M 25 320 L 170 420 L 25 520 Z" fill="url(#redGrad)" opacity="0.95" />
+  <path d="M 25 480 L 170 580 L 25 680 Z" fill="url(#redGrad)" opacity="0.95" />
+  <path d="M 25 640 L 170 740 L 25 840 Z" fill="url(#redGrad)" opacity="0.95" />
+  <path d="M 25 800 L 170 900 L 25 1000 Z" fill="url(#redGrad)" opacity="0.95" />
+
+  <!-- Right Side Gold Ribbon Fold Ornament -->
+  <path d="M 1575 320 L 1430 420 L 1575 520 Z" fill="url(#goldGrad)" opacity="0.95" />
+  <path d="M 1575 480 L 1430 580 L 1575 680 Z" fill="url(#goldGrad)" opacity="0.95" />
+  <path d="M 1575 640 L 1430 740 L 1575 840 Z" fill="url(#goldGrad)" opacity="0.95" />
+  <path d="M 1575 800 L 1430 900 L 1575 1000 Z" fill="url(#goldGrad)" opacity="0.95" />
+
+  <!-- Top-left corner crest bracket -->
+  <path d="M 55 180 L 55 55 L 180 55" fill="none" stroke="#b45309" stroke-width="2.5" />
+  <!-- Top-right corner crest bracket -->
+  <path d="M 1545 180 L 1545 55 L 1420 55" fill="none" stroke="#b45309" stroke-width="2.5" />
+
+  <!-- Header: NARESH i technologies Logo & Subtitle -->
+  <g transform="translate(800, 75)" text-anchor="middle" class="cls-sans">
+    <!-- Brand Logo Row -->
+    <g transform="translate(-290, 45)">
+      <!-- NIT emblem icon -->
+      <g transform="translate(0, -32)">
+        <rect x="0" y="8" width="36" height="36" rx="4" fill="#0284c7" />
+        <text x="18" y="32" text-anchor="middle" font-weight="800" font-size="20" fill="#ffffff">NIT</text>
+      </g>
+      <!-- NARESH i -->
+      <text x="50" y="8" text-anchor="start" font-weight="900" font-size="58" fill="#dc2626" letter-spacing="1">NARESH <tspan fill="#0284c7" font-style="italic">i</tspan></text>
+      <circle cx="340" cy="-35" r="7" fill="none" stroke="#0284c7" stroke-width="1.5" />
+      <text x="340" y="-31" text-anchor="middle" font-size="9" font-weight="700" fill="#0284c7">R</text>
+      <!-- technologies text -->
+      <text x="180" y="44" text-anchor="start" font-family="'Playfair Display', serif" font-style="italic" font-weight="700" font-size="34" fill="#0f172a">technologies</text>
+    </g>
+    
+    <!-- Subtitles -->
+    <text x="0" y="125" font-weight="700" font-size="22" fill="#0f172a" letter-spacing="0.5">Software Training &amp; Development</text>
+    <text x="0" y="152" font-weight="500" font-size="16" fill="#475569">An ISO 9001:2015 Certified Company</text>
+  </g>
+
+  <!-- Title: COURSE COMPLETION CERTIFICATE -->
+  <text x="800" y="340" text-anchor="middle" class="cls-serif" font-weight="700" font-size="54" fill="#d97706" letter-spacing="3">COURSE COMPLETION CERTIFICATE</text>
+
+  <!-- This is to certify that -->
+  <text x="800" y="425" text-anchor="middle" class="cls-sans" font-weight="700" font-size="34" fill="#111827">This is to certify that</text>
+
+  <!-- Line 1: Mr. / Miss. _________ BATCHU GIRISH KUMAR _________ -->
+  <g transform="translate(800, 530)" text-anchor="middle" class="cls-sans">
+    <!-- Mr. / Miss. label on left -->
+    <text x="-480" y="8" font-weight="500" font-size="28" fill="#1e293b">Mr. / Miss.</text>
+    <!-- Underline -->
+    <line x1="-370" y1="12" x2="480" y2="12" stroke="#475569" stroke-width="2" />
+    <!-- Candidate Name -->
+    <text x="35" y="0" font-weight="700" font-size="34" fill="#0f172a" letter-spacing="2">BATCHU GIRISH KUMAR</text>
+  </g>
+
+  <!-- Line 2: Completed A Course On _________ PYTHON _________ -->
+  <g transform="translate(800, 635)" text-anchor="middle" class="cls-sans">
+    <!-- Completed A Course On label -->
+    <text x="-430" y="8" font-weight="500" font-size="28" fill="#1e293b">Completed A Course On</text>
+    <!-- Underline -->
+    <line x1="-240" y1="12" x2="480" y2="12" stroke="#475569" stroke-width="2" />
+    <!-- Course Name -->
+    <text x="120" y="0" font-weight="700" font-size="34" fill="#0f172a" letter-spacing="3">PYTHON</text>
+  </g>
+
+  <!-- Line 3: Successfully From _________ May 2025 _________ to _________ July-2025 _________ -->
+  <g transform="translate(800, 740)" text-anchor="middle" class="cls-sans">
+    <!-- Successfully From label -->
+    <text x="-450" y="8" font-weight="500" font-size="28" fill="#1e293b">Successfully From</text>
+    <!-- Underline 1 -->
+    <line x1="-290" y1="12" x2="-20" y2="12" stroke="#475569" stroke-width="2" />
+    <text x="-155" y="0" font-weight="600" font-size="30" fill="#0f172a">May 2025</text>
+    
+    <!-- to label -->
+    <text x="35" y="8" font-weight="500" font-size="28" fill="#1e293b">to</text>
+    <!-- Underline 2 -->
+    <line x1="80" y1="12" x2="480" y2="12" stroke="#475569" stroke-width="2" />
+    <text x="280" y="0" font-weight="600" font-size="30" fill="#0f172a">July-2025</text>
+  </g>
+
+  <!-- Bottom Stamp & Center Head -->
+  <g transform="translate(1310, 845)">
+    <!-- Round Stamp Emblem -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="4 2" />
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#2563eb" stroke-width="1.5" />
+    <text x="0" y="-22" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="8.5" fill="#1d4ed8" letter-spacing="0.5">NARESH i TECHNOLOGIES</text>
+    <text x="0" y="32" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="700" font-size="8.5" fill="#1d4ed8">* AMEERPET *</text>
+
+    <!-- Center Head label below -->
+    <text x="0" y="75" text-anchor="middle" class="cls-sans" font-weight="800" font-size="22" fill="#dc2626">Center Head</text>
+  </g>
+
+  <!-- Bottom Red Address Banner -->
+  <g transform="translate(800, 970)">
+    <rect x="-725" y="-35" width="1450" height="68" rx="8" fill="#dc2626" />
+    <text x="0" y="-8" text-anchor="middle" class="cls-sans" font-weight="600" font-size="16" fill="#ffffff" letter-spacing="0.3">
+      Address:- H.O.: D.No. 201-204, Durga Bhavani Plaza, Ameerpet, Hyd - 16.
+    </text>
+    <text x="0" y="18" text-anchor="middle" class="cls-sans" font-weight="500" font-size="14.5" fill="#fecaca" letter-spacing="0.3">
+      Ph:- 040-2374 6666, +91 81791 91999, Mail: info@nareshit.com Web: www.nareshit.com
+    </text>
+  </g>
+
+  <!-- Footer Orange Social Pill -->
+  <g transform="translate(800, 1045)">
+    <rect x="-170" y="-18" width="340" height="34" rx="17" fill="#d97706" />
+    <text x="-40" y="6" text-anchor="middle" class="cls-sans" font-weight="700" font-size="16" fill="#ffffff">NareshIT /</text>
+    <circle cx="35" cy="0" r="11" fill="#ffffff" />
+    <text x="35" y="4" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12" fill="#d97706">f</text>
+    <circle cx="65" cy="0" r="11" fill="#ffffff" />
+    <text x="65" y="4" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" fill="#d97706">t</text>
+    <circle cx="95" cy="0" r="11" fill="#ffffff" />
+    <text x="95" y="4" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12" fill="#d97706">O</text>
+    <circle cx="125" cy="0" r="11" fill="#ffffff" />
+    <text x="125" y="4" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="10" fill="#d97706">in</text>
+  </g>
+</svg>

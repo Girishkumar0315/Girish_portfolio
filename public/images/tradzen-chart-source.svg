@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="chartBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1B18"/>
+      <stop offset="50%" stop-color="#091412"/>
+      <stop offset="100%" stop-color="#040A09"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="greenGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1A3B34" stroke-width="0.75" stroke-opacity="0.6"/>
+    </pattern>
+
+    <!-- Golden Bar Gradient -->
+    <linearGradient id="goldBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFDE8A"/>
+      <stop offset="50%" stop-color="#E2A244"/>
+      <stop offset="100%" stop-color="#8B5B1B"/>
+    </linearGradient>
+
+    <!-- Candle Glow -->
+    <filter id="glowCandle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base & Grid -->
+  <rect width="1600" height="900" fill="url(#chartBgGrad)"/>
+  <rect width="1600" height="900" fill="url(#greenGrid)"/>
+
+  <!-- Dust / Vignette Texture Overlay -->
+  <rect width="1600" height="900" fill="#000000" opacity="0.15"/>
+
+  <!-- TOP HEADER ROW -->
+  <g transform="translate(40, 30)">
+    <!-- Left Info -->
+    <text x="0" y="24" fill="#C99B6D" font-family="'Courier New', monospace, sans-serif" font-weight="700" font-size="16" letter-spacing="1">SIM XIAC : ANMES PTORLMC</text>
+    <text x="0" y="58" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" letter-spacing="2">AUTTIAL</text>
+    <text x="0" y="86" fill="#88A096" font-family="'Courier New', monospace" font-size="13">Chedli: gr.s os ders Rikntec, seeza, em-dsin congest</text>
+
+    <!-- Center Giant Metric: 82,00,0% -->
+    <g transform="translate(680, 0)">
+      <text x="0" y="26" fill="#A7C3B7" font-family="'Courier New', monospace" font-size="16" font-weight="600">21.21.00/1</text>
+      <text x="120" y="48" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="64" letter-spacing="-1">82,00,0%</text>
+    </g>
+
+    <!-- Right Metric Boxes -->
+    <g transform="translate(1360, 10)">
+      <text x="0" y="16" fill="#88A096" font-family="'Courier New', monospace" font-size="13">Currently Ceramic Margin</text>
+      <rect x="0" y="26" width="180" height="54" rx="6" fill="#142621" stroke="#2D4D43" stroke-width="1.2"/>
+      <text x="20" y="58" fill="#FFFFFF" font-family="system-ui, monospace" font-weight="800" font-size="24">0.900.1.00</text>
+      <text x="50" y="102" fill="#E2A244" font-family="'Courier New', monospace" font-size="15" font-weight="700">743.2134</text>
+    </g>
+  </g>
+
+  <!-- Y-AXIS LABELS (LEFT) -->
+  <g transform="translate(30, 200)" fill="#C2D6CE" font-family="'Courier New', monospace" font-size="14" font-weight="600">
+    <text x="0" y="0">1.230</text>
+    <text x="0" y="45">4.330</text>
+    <text x="0" y="90">42.00</text>
+    <text x="0" y="135">4800</text>
+    <text x="0" y="180">10.00</text>
+    <text x="0" y="225">12.708</text>
+    <text x="0" y="270">10150</text>
+    <text x="0" y="315">2035</text>
+    <text x="0" y="360">1.500</text>
+    <text x="0" y="405">1.906</text>
+    <text x="0" y="450">1.000</text>
+    <text x="0" y="495">10</text>
+  </g>
+
+  <!-- MAIN CANDLESTICK CHART AREA -->
+  <g transform="translate(100, 140)">
+    <!-- Horizontal Grid Reference Lines -->
+    <g stroke="#1A3B34" stroke-width="1" stroke-dasharray="4,4">
+      <line x1="0" y1="60" x2="1420" y2="60"/>
+      <line x1="0" y1="120" x2="1420" y2="120"/>
+      <line x1="0" y1="180" x2="1420" y2="180"/>
+      <line x1="0" y1="240" x2="1420" y2="240"/>
+      <line x1="0" y1="300" x2="1420" y2="300"/>
+      <line x1="0" y1="360" x2="1420" y2="360"/>
+      <line x1="0" y1="420" x2="1420" y2="420"/>
+    </g>
+
+    <!-- Dotted Moving Average Trendline (Yellow/Amber) -->
+    <path d="M 20,440 Q 200,380 340,320 T 560,260 T 800,280 T 1000,180 T 1200,80 T 1320,60" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="6,6"/>
+
+    <!-- Solid Exponential Moving Average Line (Green/Orange) -->
+    <path d="M 20,410 Q 180,360 360,280 T 600,240 T 780,260 T 960,150 T 1140,50 T 1300,70" fill="none" stroke="#E2A244" stroke-width="2.5"/>
+
+    <!-- Candlestick Clusters -->
+    <g fill="#EAFCF5" stroke="#EAFCF5" filter="url(#glowCandle)">
+      <!-- Left upward stair -->
+      <line x1="20" y1="430" x2="20" y2="470" stroke-width="1.5"/><rect x="16" y="440" width="8" height="24"/>
+      <line x1="38" y1="410" x2="38" y2="455" stroke-width="1.5"/><rect x="34" y="420" width="8" height="28"/>
+      <line x1="56" y1="390" x2="56" y2="440" stroke-width="1.5"/><rect x="52" y="400" width="8" height="30"/>
+      <line x1="74" y1="370" x2="74" y2="425" stroke-width="1.5"/><rect x="70" y="380" width="8" height="35"/>
+      <line x1="92" y1="350" x2="92" y2="410" stroke-width="1.5"/><rect x="88" y="365" width="8" height="30"/>
+      <line x1="110" y1="340" x2="110" y2="395" stroke-width="1.5"/><rect x="106" y="350" width="8" height="32"/>
+      <line x1="128" y1="320" x2="128" y2="380" stroke-width="1.5"/><rect x="124" y="330" width="8" height="36"/>
+      <line x1="146" y1="310" x2="146" y2="370" stroke-width="1.5"/><rect x="142" y="325" width="8" height="30"/>
+      <line x1="164" y1="330" x2="164" y2="390" stroke-width="1.5"/><rect x="160" y="340" width="8" height="34"/>
+      <line x1="182" y1="300" x2="182" y2="360" stroke-width="1.5"/><rect x="178" y="315" width="8" height="32"/>
+      <line x1="200" y1="280" x2="200" y2="340" stroke-width="1.5"/><rect x="196" y="295" width="8" height="35"/>
+      <line x1="218" y1="260" x2="218" y2="320" stroke-width="1.5"/><rect x="214" y="275" width="8" height="30"/>
+      <line x1="236" y1="280" x2="236" y2="340" stroke-width="1.5"/><rect x="232" y="290" width="8" height="35"/>
+
+      <!-- Mid consolidation box -->
+      <line x1="280" y1="230" x2="280" y2="310" stroke-width="1.5"/><rect x="276" y="250" width="8" height="45"/>
+      <line x1="300" y1="220" x2="300" y2="290" stroke-width="1.5"/><rect x="296" y="240" width="8" height="40"/>
+      <line x1="320" y1="210" x2="320" y2="280" stroke-width="1.5"/><rect x="316" y="230" width="8" height="35"/>
+      <line x1="340" y1="220" x2="340" y2="295" stroke-width="1.5"/><rect x="336" y="240" width="8" height="38"/>
+      <line x1="360" y1="200" x2="360" y2="270" stroke-width="1.5"/><rect x="356" y="220" width="8" height="35"/>
+      <line x1="380" y1="210" x2="380" y2="280" stroke-width="1.5"/><rect x="376" y="230" width="8" height="36"/>
+      <line x1="400" y1="230" x2="400" y2="300" stroke-width="1.5"/><rect x="396" y="245" width="8" height="40"/>
+      <line x1="420" y1="220" x2="420" y2="285" stroke-width="1.5"/><rect x="416" y="235" width="8" height="35"/>
+      <line x1="440" y1="210" x2="440" y2="275" stroke-width="1.5"/><rect x="436" y="225" width="8" height="35"/>
+      <line x1="460" y1="220" x2="460" y2="290" stroke-width="1.5"/><rect x="456" y="240" width="8" height="38"/>
+      <line x1="480" y1="240" x2="480" y2="310" stroke-width="1.5"/><rect x="476" y="255" width="8" height="40"/>
+      <line x1="500" y1="260" x2="500" y2="330" stroke-width="1.5"/><rect x="496" y="275" width="8" height="42"/>
+      <line x1="520" y1="250" x2="520" y2="320" stroke-width="1.5"/><rect x="516" y="265" width="8" height="40"/>
+      <line x1="540" y1="240" x2="540" y2="310" stroke-width="1.5"/><rect x="536" y="255" width="8" height="38"/>
+      <line x1="560" y1="270" x2="560" y2="340" stroke-width="1.5"/><rect x="556" y="285" width="8" height="42"/>
+      <line x1="580" y1="280" x2="580" y2="350" stroke-width="1.5"/><rect x="576" y="295" width="8" height="40"/>
+      <line x1="600" y1="260" x2="600" y2="330" stroke-width="1.5"/><rect x="596" y="275" width="8" height="40"/>
+      <line x1="620" y1="250" x2="620" y2="320" stroke-width="1.5"/><rect x="616" y="265" width="8" height="40"/>
+
+      <!-- Right massive bull surge -->
+      <line x1="660" y1="220" x2="660" y2="290" stroke-width="1.5"/><rect x="656" y="235" width="8" height="40"/>
+      <line x1="680" y1="190" x2="680" y2="260" stroke-width="1.5"/><rect x="676" y="205" width="8" height="42"/>
+      <line x1="700" y1="160" x2="700" y2="230" stroke-width="1.5"/><rect x="696" y="175" width="8" height="42"/>
+      <line x1="720" y1="140" x2="720" y2="210" stroke-width="1.5"/><rect x="716" y="155" width="8" height="40"/>
+      <line x1="740" y1="120" x2="740" y2="190" stroke-width="1.5"/><rect x="736" y="135" width="8" height="42"/>
+      <line x1="760" y1="100" x2="760" y2="170" stroke-width="1.5"/><rect x="756" y="115" width="8" height="44"/>
+      <line x1="780" y1="90" x2="780" y2="160" stroke-width="1.5"/><rect x="776" y="105" width="8" height="40"/>
+      <line x1="800" y1="70" x2="800" y2="140" stroke-width="1.5"/><rect x="796" y="85" width="8" height="42"/>
+      <line x1="820" y1="60" x2="820" y2="130" stroke-width="1.5"/><rect x="816" y="75" width="8" height="42"/>
+      <line x1="840" y1="50" x2="840" y2="120" stroke-width="1.5"/><rect x="836" y="65" width="8" height="42"/>
+      <line x1="860" y1="45" x2="860" y2="110" stroke-width="1.5"/><rect x="856" y="60" width="8" height="40"/>
+      <line x1="880" y1="40" x2="880" y2="105" stroke-width="1.5"/><rect x="876" y="55" width="8" height="40"/>
+      <line x1="900" y1="55" x2="900" y2="115" stroke-width="1.5"/><rect x="896" y="68" width="8" height="35"/>
+      <line x1="920" y1="65" x2="920" y2="130" stroke-width="1.5"/><rect x="916" y="80" width="8" height="38"/>
+      <line x1="940" y1="55" x2="940" y2="120" stroke-width="1.5"/><rect x="936" y="70" width="8" height="36"/>
+      <line x1="960" y1="50" x2="960" y2="110" stroke-width="1.5"/><rect x="956" y="65" width="8" height="35"/>
+      <line x1="980" y1="40" x2="980" y2="100" stroke-width="1.5"/><rect x="976" y="52" width="8" height="36"/>
+      <line x1="1000" y1="35" x2="1000" y2="95" stroke-width="1.5"/><rect x="996" y="48" width="8" height="36"/>
+      <line x1="1020" y1="30" x2="1020" y2="90" stroke-width="1.5"/><rect x="1016" y="42" width="8" height="38"/>
+      <line x1="1040" y1="45" x2="1040" y2="105" stroke-width="1.5"/><rect x="1036" y="58" width="8" height="36"/>
+      <line x1="1060" y1="60" x2="1060" y2="120" stroke-width="1.5"/><rect x="1056" y="72" width="8" height="38"/>
+      <line x1="1080" y1="75" x2="1080" y2="135" stroke-width="1.5"/><rect x="1076" y="88" width="8" height="36"/>
+    </g>
+  </g>
+
+  <!-- MIDDLE SAW-TOOTH OSCILLATOR BAND -->
+  <g transform="translate(40, 520)">
+    <!-- Baseline -->
+    <line x1="0" y1="80" x2="1520" y2="80" stroke="#C99B6D" stroke-width="1.5"/>
+    <!-- Saw-tooth fill polygon -->
+    <polygon points="
+      10,80 30,55 50,75 70,40 90,65 120,30 150,60 180,25 210,55 240,15 270,50 300,10 330,45 360,20 390,60 420,35 450,70 480,45 510,75 540,50 570,80 600,40 630,70 660,30 690,65 720,20 750,55 780,15 810,50 840,10 870,45 900,20 930,60 960,35 990,70 1020,40 1050,75 1080,45 1110,80 1140,50 1170,80 1200,35 1230,70 1260,20 1290,55 1320,15 1350,50 1380,10 1410,45 1440,20 1470,60 1500,80
+    " fill="#0E241E" stroke="#E2A244" stroke-width="2"/>
+  </g>
+
+  <!-- BOTTOM ROW: HORIZONTAL AXIS LABELS & DENSE VOLUME BARS -->
+  <g transform="translate(40, 680)">
+    <!-- X-Axis Labels -->
+    <g fill="#A7C3B7" font-family="'Courier New', monospace" font-size="14" font-weight="600">
+      <text x="10" y="0">3520</text>
+      <text x="110" y="0">3556</text>
+      <text x="210" y="0">8046</text>
+      <text x="310" y="0">2556</text>
+      <text x="410" y="0">260G</text>
+      <text x="510" y="0">3604</text>
+      <text x="610" y="0">5568</text>
+      <text x="710" y="0">2085</text>
+      <text x="790" y="0">2086</text>
+      <text x="890" y="0">35160</text>
+      <text x="980" y="0">28220</text>
+      <text x="1070" y="0">05656</text>
+      <text x="1160" y="0">3000</text>
+      <text x="1240" y="0">238KD</text>
+      <text x="1320" y="0">298885</text>
+      <text x="1410" y="0">28EM</text>
+    </g>
+
+    <!-- Sub-Chart Grid in Bottom-Right for Volume Bars -->
+    <g transform="translate(860, 40)">
+      <!-- Volume Histogram Vertical Bars (Golden gradient) -->
+      <g fill="url(#goldBarGrad)" stroke="#A16207" stroke-width="0.5">
+        <rect x="0" y="110" width="12" height="40"/>
+        <rect x="18" y="95" width="12" height="55"/>
+        <rect x="36" y="80" width="12" height="70"/>
+        <rect x="54" y="90" width="12" height="60"/>
+        <rect x="72" y="70" width="12" height="80"/>
+        <rect x="90" y="55" width="12" height="95"/>
+        <rect x="108" y="65" width="12" height="85"/>
+        <rect x="126" y="45" width="12" height="105"/>
+        <rect x="144" y="30" width="12" height="120"/>
+        <rect x="162" y="40" width="12" height="110"/>
+        <rect x="180" y="25" width="12" height="125"/>
+        <rect x="198" y="35" width="12" height="115"/>
+        <rect x="216" y="50" width="12" height="100"/>
+        <rect x="234" y="30" width="12" height="120"/>
+        <rect x="252" y="15" width="12" height="135"/>
+        <rect x="270" y="25" width="12" height="125"/>
+        <rect x="288" y="40" width="12" height="110"/>
+        <rect x="306" y="20" width="12" height="130"/>
+        <rect x="324" y="10" width="12" height="140"/>
+        <rect x="342" y="25" width="12" height="125"/>
+        <rect x="360" y="35" width="12" height="115"/>
+        <rect x="378" y="45" width="12" height="105"/>
+        <rect x="396" y="60" width="12" height="90"/>
+        <rect x="414" y="75" width="12" height="75"/>
+        <rect x="432" y="85" width="12" height="65"/>
+        <rect x="450" y="70" width="12" height="80"/>
+        <rect x="468" y="90" width="12" height="60"/>
+        <rect x="486" y="98" width="12" height="52"/>
+        <rect x="504" y="110" width="12" height="40"/>
+        <rect x="522" y="120" width="12" height="30"/>
+      </g>
+      <!-- Bottom Axis info -->
+      <text x="180" y="170" fill="#E2A244" font-family="'Courier New', monospace" font-size="13">20.30</text>
+      <text x="260" y="170" fill="#E2A244" font-family="'Courier New', monospace" font-size="13">333.10</text>
+      <text x="360" y="170" fill="#E2A244" font-family="'Courier New', monospace" font-size="13">-2530</text>
+      <text x="450" y="170" fill="#E2A244" font-family="'Courier New', monospace" font-size="13">22 10</text>
+    </g>
+
+    <!-- Sub-Chart Grid Left Info -->
+    <g transform="translate(680, 50)" fill="#A7C3B7" font-family="'Courier New', monospace" font-size="14">
+      <text x="0" y="0">18,7.655</text>
+      <text x="0" y="30">G, 0805</text>
+      <text x="0" y="65">78,7565</text>
+    </g>
+  </g>
+</svg>

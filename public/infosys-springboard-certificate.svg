@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Inter:wght@400;500;600;700&amp;display=swap");
+      .main-text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .signature-text { font-family: 'Dancing Script', cursive, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background White Paper -->
+  <rect width="1600" height="1100" fill="#ffffff" />
+
+  <!-- Top Infosys Logo -->
+  <g transform="translate(680, 50)" class="main-text">
+    <text x="0" y="70" font-weight="700" font-size="78" fill="#007cc3" letter-spacing="-1">Infosys</text>
+    <circle cx="258" cy="18" r="7" fill="none" stroke="#007cc3" stroke-width="2" />
+    <text x="255" y="22" font-size="9" fill="#007cc3" font-weight="700">R</text>
+    <text x="5" y="105" font-weight="400" font-size="22" fill="#001c3d" letter-spacing="0.5">Navigate your next</text>
+  </g>
+
+  <!-- Left decorative dashed barcode lines -->
+  <g stroke="#92cbf5" stroke-width="4.5" stroke-linecap="round">
+    <line x1="25" y1="295" x2="25" y2="345" />
+    <line x1="50" y1="295" x2="50" y2="345" />
+    <line x1="75" y1="295" x2="75" y2="345" />
+    <line x1="100" y1="295" x2="100" y2="345" />
+    <line x1="125" y1="295" x2="125" y2="345" />
+    <line x1="150" y1="295" x2="150" y2="345" />
+    <line x1="175" y1="295" x2="175" y2="345" />
+    <line x1="200" y1="295" x2="200" y2="345" />
+    <line x1="225" y1="295" x2="225" y2="345" />
+    <line x1="250" y1="295" x2="250" y2="345" />
+    <line x1="275" y1="295" x2="275" y2="345" />
+    <line x1="300" y1="295" x2="300" y2="345" />
+  </g>
+
+  <!-- Title: COURSE COMPLETION CERTIFICATE -->
+  <text x="800" y="330" text-anchor="middle" class="main-text" font-weight="700" font-size="44" fill="#007cc3" letter-spacing="1.5">COURSE COMPLETION CERTIFICATE</text>
+
+  <!-- Right decorative dashed barcode lines -->
+  <g stroke="#92cbf5" stroke-width="4.5" stroke-linecap="round">
+    <line x1="1300" y1="295" x2="1300" y2="345" />
+    <line x1="1325" y1="295" x2="1325" y2="345" />
+    <line x1="1350" y1="295" x2="1350" y2="345" />
+    <line x1="1375" y1="295" x2="1375" y2="345" />
+    <line x1="1400" y1="295" x2="1400" y2="345" />
+    <line x1="1425" y1="295" x2="1425" y2="345" />
+    <line x1="1450" y1="295" x2="1450" y2="345" />
+    <line x1="1475" y1="295" x2="1475" y2="345" />
+    <line x1="1500" y1="295" x2="1500" y2="345" />
+    <line x1="1525" y1="295" x2="1525" y2="345" />
+    <line x1="1550" y1="295" x2="1550" y2="345" />
+    <line x1="1575" y1="295" x2="1575" y2="345" />
+  </g>
+
+  <!-- Subtitle -->
+  <text x="800" y="420" text-anchor="middle" class="main-text" font-size="25" fill="#333333">The certificate is awarded to</text>
+
+  <!-- Candidate Name -->
+  <text x="800" y="495" text-anchor="middle" class="main-text" font-weight="700" font-size="52" fill="#007cc3" letter-spacing="0.5">Girish Kumar</text>
+
+  <!-- Description line 1 -->
+  <text x="800" y="565" text-anchor="middle" class="main-text" font-size="25" fill="#222222">for successfully completing the course</text>
+
+  <!-- Course Title -->
+  <text x="800" y="625" text-anchor="middle" class="main-text" font-weight="700" font-size="31" fill="#111111">Database Management System Part - 1</text>
+
+  <!-- Date -->
+  <text x="800" y="685" text-anchor="middle" class="main-text" font-size="25" fill="#222222">on July 17, 2026</text>
+
+  <!-- Infosys | Springboard Logo Center -->
+  <g transform="translate(570, 740)" class="main-text">
+    <text x="0" y="65" font-weight="700" font-size="65" fill="#007cc3">Infosys</text>
+    <text x="210" y="65" font-weight="300" font-size="65" fill="#999999">|</text>
+    <text x="240" y="65" font-weight="700" font-size="65" fill="#ea580c">Springboard</text>
+  </g>
+
+  <!-- Congratulations text -->
+  <text x="800" y="880" text-anchor="middle" class="main-text" font-style="italic" font-size="36" fill="#e05642" font-weight="600">Congratulations! You make us proud!</text>
+
+  <!-- Bottom Left: QR Code -->
+  <g transform="translate(60, 680)">
+    <!-- QR Code boundary box -->
+    <rect x="0" y="0" width="180" height="180" fill="#ffffff" stroke="#000000" stroke-width="1.5" />
+    <!-- Authentic QR pattern matching user image -->
+    <g fill="#000000">
+      <rect x="14" y="14" width="48" height="48" />
+      <rect x="22" y="22" width="32" height="32" fill="#ffffff" />
+      <rect x="28" y="28" width="20" height="20" />
+      
+      <rect x="118" y="14" width="48" height="48" />
+      <rect x="126" y="22" width="32" height="32" fill="#ffffff" />
+      <rect x="132" y="28" width="20" height="20" />
+
+      <rect x="14" y="118" width="48" height="48" />
+      <rect x="22" y="126" width="32" height="32" fill="#ffffff" />
+      <rect x="28" y="132" width="20" height="20" />
+
+      <!-- QR Data modules -->
+      <rect x="74" y="16" width="8" height="32" />
+      <rect x="90" y="24" width="16" height="8" />
+      <rect x="74" y="58" width="24" height="8" />
+      <rect x="18" y="74" width="32" height="8" />
+      <rect x="36" y="90" width="24" height="8" />
+      <rect x="72" y="74" width="36" height="36" />
+      <rect x="80" y="82" width="20" height="20" fill="#ffffff" />
+      <rect x="86" y="88" width="8" height="8" />
+      <rect x="118" y="74" width="16" height="16" />
+      <rect x="142" y="80" width="24" height="8" />
+      <rect x="120" y="102" width="36" height="8" />
+      <rect x="74" y="120" width="16" height="24" />
+      <rect x="98" y="136" width="24" height="8" />
+      <rect x="130" y="128" width="16" height="24" />
+      <rect x="154" y="144" width="12" height="12" />
+      <rect x="114" y="152" width="8" height="14" />
+      <rect x="82" y="152" width="16" height="14" />
+    </g>
+
+    <!-- Verification text below QR -->
+    <text x="0" y="215" class="main-text" font-size="16" fill="#333333">Issued on: Friday, July 17, 2026</text>
+    <text x="0" y="240" class="main-text" font-size="16" fill="#333333">To verify, scan the QR code at <tspan fill="#0066cc" text-decoration="underline">https://verify.onwingspan.com</tspan></text>
+  </g>
+
+  <!-- Bottom Right: Satheesha B. Nanjappa details -->
+  <g transform="translate(1360, 930)" text-anchor="middle" class="main-text">
+    <!-- Line -->
+    <line x1="-140" y1="0" x2="140" y2="0" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- Printed Name -->
+    <text x="0" y="32" font-size="19" font-weight="600" fill="#222222">Satheesha B. Nanjappa</text>
+    <!-- Designation -->
+    <text x="0" y="58" font-size="15" fill="#444444">Senior Vice President and Head</text>
+    <text x="0" y="80" font-size="15" fill="#444444">Education, Training and Assessment</text>
+    <text x="0" y="102" font-size="15" fill="#444444">Infosys Limited</text>
+  </g>
+</svg>
