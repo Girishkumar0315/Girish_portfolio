@@ -136,20 +136,32 @@ export const ProjectsSection: React.FC = () => {
       <AnimatePresence>
         {selectedProject && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-xl overflow-hidden"
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-hidden"
             data-lenis-prevent="true"
-            onClick={(e) => {
-              if (e.target === e.currentTarget) setSelectedProject(null);
-            }}
           >
+            {/* Smooth Animated Backdrop */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.88, y: 40, rotateX: 6 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              onClick={() => setSelectedProject(null)}
+              className="absolute inset-0 bg-black/85 backdrop-blur-xl cursor-pointer"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 35, rotateX: 5 }}
               animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20, filter: 'blur(10px)' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 280 }}
-              style={{ perspective: 1000 }}
+              exit={{ opacity: 0, scale: 0.92, y: 20, filter: 'blur(8px)' }}
+              transition={{
+                type: 'spring',
+                damping: 28,
+                stiffness: 260,
+                mass: 0.85
+              }}
+              style={{ perspective: 1200 }}
               data-lenis-prevent="true"
-              className="relative flex flex-col max-h-[92vh] sm:max-h-[88vh] w-full max-w-3xl rounded-[28px] sm:rounded-[36px] border-2 border-[#00E676]/45 bg-[#0C0C0C] shadow-[0_25px_80px_rgba(0,0,0,0.95),0_0_50px_rgba(0,230,118,0.15)] text-left overflow-hidden"
+              className="relative flex flex-col max-h-[92vh] sm:max-h-[88vh] w-full max-w-3xl rounded-[28px] sm:rounded-[36px] border-2 border-[#00E676]/45 bg-[#0C0C0C] shadow-[0_25px_80px_rgba(0,0,0,0.95),0_0_50px_rgba(0,230,118,0.15)] text-left overflow-hidden z-10"
             >
               {/* STICKY / FIXED MODAL HEADER */}
               <div className="flex items-center justify-between px-6 sm:px-10 py-5 sm:py-6 border-b border-white/10 bg-[#0C0C0C]/95 backdrop-blur-md z-10 flex-shrink-0 select-none">

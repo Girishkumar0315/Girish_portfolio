@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, Award, Database, Code2, CheckCircle, ExternalLink, X, Sparkles } from 'lucide-react';
+import { Trophy, Award, Database, Code2, CheckCircle, ExternalLink, X, Sparkles, Loader2 } from 'lucide-react';
 import { CERTIFICATES_DATA, ACHIEVEMENTS_DATA } from '../data/portfolioData';
 
 interface CertAchievementDisplayItem {
@@ -19,6 +19,14 @@ interface CertAchievementDisplayItem {
 
 export const CertificatesSection: React.FC = () => {
   const [selectedCert, setSelectedCert] = useState<CertAchievementDisplayItem | null>(null);
+  const [iframeLoading, setIframeLoading] = useState(true);
+
+  // Reset loading spinner whenever a new certificate is opened
+  useEffect(() => {
+    if (selectedCert) {
+      setIframeLoading(true);
+    }
+  }, [selectedCert]);
 
   // Prevent background scrolling and pause Lenis while certificate modal is open
   useEffect(() => {
@@ -214,20 +222,32 @@ export const CertificatesSection: React.FC = () => {
       <AnimatePresence>
         {selectedCert && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-xl overflow-hidden"
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-hidden"
             data-lenis-prevent="true"
-            onClick={(e) => {
-              if (e.target === e.currentTarget) setSelectedCert(null);
-            }}
           >
+            {/* Smooth Animated Backdrop */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.88, y: 35, rotateX: 6 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              onClick={() => setSelectedCert(null)}
+              className="absolute inset-0 bg-black/85 backdrop-blur-xl cursor-pointer"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 32, rotateX: 5 }}
               animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20, filter: 'blur(8px)' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 280 }}
-              style={{ perspective: 1000 }}
+              exit={{ opacity: 0, scale: 0.92, y: 20, filter: 'blur(8px)' }}
+              transition={{
+                type: 'spring',
+                damping: 28,
+                stiffness: 260,
+                mass: 0.85
+              }}
+              style={{ perspective: 1200 }}
               data-lenis-prevent="true"
-              className="relative flex flex-col max-h-[92vh] sm:max-h-[88vh] w-full max-w-4xl rounded-[28px] sm:rounded-[36px] border-2 border-amber-400/40 bg-[#0C0C0C] text-white shadow-[0_25px_80px_rgba(0,0,0,0.95),0_0_50px_rgba(251,191,36,0.15)] text-left overflow-hidden"
+              className="relative flex flex-col max-h-[92vh] sm:max-h-[88vh] w-full max-w-4xl rounded-[28px] sm:rounded-[36px] border-2 border-amber-400/40 bg-[#0C0C0C] text-white shadow-[0_25px_80px_rgba(0,0,0,0.95),0_0_50px_rgba(251,191,36,0.2)] text-left overflow-hidden z-10"
             >
               {/* MODAL HEADER */}
               <div className="flex items-center justify-between px-6 sm:px-10 py-5 sm:py-6 border-b border-white/10 bg-[#0C0C0C]/95 backdrop-blur-md z-10 flex-shrink-0 select-none">
@@ -259,15 +279,30 @@ export const CertificatesSection: React.FC = () => {
               {/* MODAL BODY WITH EMBEDDED DRIVE VIEWER */}
               <div
                 data-lenis-prevent="true"
-                className="flex-1 overflow-y-auto p-4 sm:p-6 bg-[#080808] flex flex-col items-center justify-center min-h-[350px] sm:min-h-[480px]"
+                className="flex-1 overflow-y-auto p-4 sm:p-6 bg-[#080808] flex flex-col items-center justify-center min-h-[350px] sm:min-h-[480px] relative"
               >
                 <div className="w-full h-[52vh] sm:h-[60vh] rounded-2xl overflow-hidden border border-white/10 bg-black/60 shadow-inner relative flex items-center justify-center">
+                  {/* Smooth Loading Indicator while Google Drive file loads */}
+                  {iframeLoading && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm gap-3"
+                    >
+                      <Loader2 className="h-8 w-8 text-amber-400 animate-spin" />
+                      <p className="text-xs font-mono text-neutral-400 tracking-wider">
+                        Loading verified credential document...
+                      </p>
+                    </motion.div>
+                  )}
                   <iframe
                     src={selectedCert.credentialUrl.replace('/view?usp=sharing', '/preview')}
                     title={`${selectedCert.title} Certificate Preview`}
-                    className="w-full h-full border-0 rounded-2xl"
+                    className={`w-full h-full border-0 rounded-2xl transition-opacity duration-500 ${iframeLoading ? 'opacity-0' : 'opacity-100'}`}
                     allow="autoplay"
                     loading="lazy"
+                    onLoad={() => setIframeLoading(false)}
                   />
                 </div>
               </div>
